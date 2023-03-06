@@ -4,10 +4,7 @@
       <div class="col-lg-6">
         <div class="hero-text">
           <h1>Отель Цитадель</h1>
-          <p>
-                Here are the best hotel booking sites, including recommendations
-                for international travel and for finding low-priced hotel rooms.
-              </p>
+          <p>Наше расположение приятно удивит Вас<br>Мы находимся в самом сердце Дербента, откуда в шаговой доступности Крепость Нарын-Кала, Магалы, базары, а также самый большой мультимединый фонтан в России.</p>
           <!-- <a href="#" class="primary-btn">подробнее</a> -->
         </div>
       </div>
