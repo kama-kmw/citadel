@@ -11,7 +11,7 @@
                   <h2 class='footer__logo'>Отель Цитадель</h2>
                 </div>
                 <p>
-                  Мы находимся в самом центре Дербента<br />
+                  Мы находимся в Дербента<br />
                   Достопримечательности в шаговой доступности
                 </p>
                 <div class="fa-social">
@@ -19,7 +19,7 @@
                   <!-- <a href="#"><i class="fa fa-twitter"></i></a>
                   <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
                   <a href="#"><i class="fa fa-instagram"></i></a>
-                  <a href="#"><i class="fa fa-envelope"></i></a>
+                  <!-- <a href="#"><i class="fa fa-envelope"></i></a> -->
                 </div>
               </div>
             </div>
@@ -27,9 +27,10 @@
               <div class="ft-contact">
                 <h6>Контакты</h6>
                 <ul>
-                  <li> +7 (963) 407-01-07</li>
-                  <li>info.colorlib@gmail.com</li>
-                  <li>856 Cordia Extension Apt. 356, Lake, United State</li>
+                  <li><a href="tel:89659287777"><i class="fa fa-phone"></i> +7 (965) 928-77-77</a></li>
+                  <li><a href="tel:89285433344"><i class="fa fa-phone"></i> +7 (928) 543-33-44</a></li>
+                  <li>ул. Мира, д. 1</li>
+                  <li>г. Дербент</li>
                 </ul>
               </div>
             </div>

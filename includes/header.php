@@ -4,8 +4,8 @@
           <div class="row">
             <div class="col-lg-6">
               <ul class="tn-left">
-                <li><i class="fa fa-phone"></i> +7 (963) 407-01-07</li>
-                <li><i class="fa fa-whatsapp"></i>WhatsApp</li>
+                <li><a href="tel:89659287777"><i class="fa fa-phone"></i> +7 (965) 928-77-77</a></li>
+                <li><a href="tel:89285433344"><i class="fa fa-phone"></i> +7 (928) 543-33-44</a></li>
               </ul>
             </div>
             <div class="col-lg-6">
@@ -13,7 +13,8 @@
                 <div class="top-social">
                   <!-- <a href="#"><i class="fa fa-facebook"></i></a>
                   <a href="#"><i class="fa fa-twitter"></i></a> -->
-                  <a href="#"><i class="fa fa-envelope"></i></a>
+                  <a href="#"></a><i class="fa fa-whatsapp"></i>
+                  <!-- <a href="#"><i class="fa fa-envelope"></i></a> -->
                   <a href="#"><i class="fa fa-instagram"></i></a>
                 </div>
                 <!-- <a href="#" class="bk-btn">Booking Now</a> -->
@@ -38,7 +39,7 @@
             <div class="col-lg-2">
               <div class="logo">
                 <a href="./index.html">
-                  <img src="img/logo.png" alt="" />
+                  <img src="img/005.png"/> <span>Hotel-Citadel</span>
                 </a>
               </div>
             </div>
