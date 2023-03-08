@@ -30,9 +30,9 @@
     </div>
     <nav class="mainmenu mobile-menu">
       <ul>
-        <li class="active"><a href="./index.html">Главная</a></li>
-        <li><a href="./rooms.html">О нас</a></li>
-        <li><a href="./about-us.html">Номера</a>
+        <li class="active"><a href="index.php">Главная</a></li>
+        <li><a href="rooms-details.php">О нас</a></li>
+        <li><a href="about-us.php">Номера</a>
           <ul class="dropdown">
             <li><a href="#">Deluxe Room</a></li>
             <li><a href="#">Family Room</a></li>
@@ -40,7 +40,7 @@
           </ul>
         </li>
         <li>
-          <a href="./pages.html">Контакты</a>
+          <a href="contact.php">Контакты</a>
         </li>
       </ul>
     </nav>
