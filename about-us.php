@@ -84,7 +84,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="ap-title">
-                            <h2>Добро пожаловать в Цидадель.</h2>
+                            <h2>Добро пожаловать в Цидадель</h2>
                             <p>Уютный отель в центре Дербента, предлагает отличное расположение и современные удобства.</p>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-text">
-                        <h2>Откройте для себя наш отель и услуги..</h2>
+                        <h2>Откройте для себя наш отель и услуги</h2>
                         <p>Мы рады гостям и жителям города</p>
                         <!-- <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><img
                                 src="img/play.png" alt=""></a> -->
