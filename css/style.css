@@ -648,6 +648,13 @@ ol {
   left: 0;
   top: 0;
 }
+
+.hero-slider-rooms {
+  max-width: 100%;
+  height: 429px;
+  position: relative;
+
+}
 .hero-slider.owl-carousel .owl-dots {
   position: absolute;
   left: 0;

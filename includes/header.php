@@ -48,8 +48,8 @@
                 <nav class="mainmenu">
                   <ul>
                     <li class="active"><a href="./index.php">Главная</a></li>
-                    <li><a href="./rooms.php">Номера</a></li>
-                    <!-- <li><a href="./about-us.html">About Us</a></li> -->
+                    <li><a href="./room-details.php">Номера</a></li>
+                    <li><a href="./about-us.php">О нас</a></li>
                     <!-- <li>
                       <a href="./pages.html">Pages</a>
                       <ul class="dropdown">
