@@ -104,21 +104,21 @@
                     <div class="col-md-4">
                         <div class="ap-service-item set-bg" data-setbg="img/about/about-p1.jpg">
                             <div class="api-text">
-                                <h3>Restaurants Services</h3>
+                                <h3>Прачечная</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="ap-service-item set-bg" data-setbg="img/about/about-p2.jpg">
                             <div class="api-text">
-                                <h3>Travel & Camping</h3>
+                                <h3>Камера Хранения</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="ap-service-item set-bg" data-setbg="img/about/about-p3.jpg">
                             <div class="api-text">
-                                <h3>Event & Party</h3>
+                                <h3>Трансфер</h3>
                             </div>
                         </div>
                     </div>
