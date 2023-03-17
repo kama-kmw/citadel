@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<?php include_once 'includes/head.php'; ?>  
+<?php include_once 'includes/head.php'; ?>
 
 
 <body>
@@ -39,7 +39,7 @@
             <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="./rooms.html">Rooms</a></li>
-                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./about.html">About Us</a></li>
                 <li><a href="./pages.html">Pages</a>
                     <ul class="dropdown">
                         <li><a href="./room-details.html">Room Details</a></li>

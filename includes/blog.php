@@ -4,72 +4,69 @@
           <div class="col-lg-12">
             <div class="section-title">
               <span>немного о городе</span>
-              <h2>Наши достопримечательности</h2>
+              <h2>Наши достоприме<wbr/>чательности</h2>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/blog1.jpeg">
+            <div class="blog-item set-bg" data-setbg="img/blog/01.jpg">
               <div class="bi-text">
-                <span class="b-tag">Travel Trip</span>
-                <h4><a href="#">Tremblant In Canada</a></h4>
+                <!-- <span class="b-tag">Travel Trip</span> -->
+                <h4><a>Крепость Нарын-Кала</a> </h4>
                 <div class="b-time">
-                  <i class="icon_clock_alt"></i> 15th April, 2019
+                   <!-- <i class="icon_clock_alt"></i> 15th April, 2019 -->
+                  Древнейшее сооружение на Кавказе
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/blog2.jpeg">
+            <div class="blog-item set-bg" data-setbg="img/blog/02.jpg">
               <div class="bi-text">
-                <span class="b-tag">Camping</span>
-                <h4><a href="#">Choosing A Static Caravan</a></h4>
+                <h4><a>Магалы</a></h4>
                 <div class="b-time">
-                  <i class="icon_clock_alt"></i> 15th April, 2019
+                  Исторические места Дербента
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/blog3.jpeg">
+            <div class="blog-item set-bg" data-setbg="img/blog/03.jpg">
               <div class="bi-text">
-                <span class="b-tag">Event</span>
-                <h4><a href="#">Copper Canyon</a></h4>
+                <h4><a>Фонтан</a></h4>
                 <div class="b-time">
-                  <i class="icon_clock_alt"></i> 21th April, 2019
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <div
-              class="blog-item small-size set-bg"
-              data-setbg="img/blog/blog5.jpeg"
-            >
-              <div class="bi-text">
-                <span class="b-tag">Event</span>
-                <h4>
-                  <a href="#"
-                    >Trip To Iqaluit In Nunavut A Canadian Arctic City</a
-                  >
-                </h4>
-                <div class="b-time">
-                  <i class="icon_clock_alt"></i> 08th April, 2019
+                  Самый большой фонтан в России
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4">
-            <div
-              class="blog-item small-size set-bg"
-              data-setbg="img/blog/blog4.jpeg"
-            >
+            <div class="blog-item set-bg" data-setbg="img/blog/04.jpg">
               <div class="bi-text">
-                <span class="b-tag">Travel</span>
-                <h4><a href="#">Traveling To Barcelona</a></h4>
+                <h4><a>Дом Петра</a></h4>
                 <div class="b-time">
-                  <i class="icon_clock_alt"></i> 12th April, 2019
+                  Резиденция Петра Первого
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="blog-item set-bg" data-setbg="img/blog/05.jpg">
+              <div class="bi-text">
+                <h4><a>Набережная</a></h4>
+                <div class="b-time">
+                  Одно из самых посещаемых мест
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="blog-item set-bg" data-setbg="img/blog/06.jpg">
+              <div class="bi-text">
+                <h4><a>Базары</a></h4>
+                <div class="b-time">
+                  Самые вкусные продукты
                 </div>
               </div>
             </div>

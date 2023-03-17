@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-    <?php include_once 'includes/head.php'; ?>  
+<?php include_once 'includes/head.php'; ?>
 
 
 <body>
@@ -39,15 +39,15 @@
             <ul>
                 <li class="active"><a href="index.php">Главная</a></li>
                 <li><a href="rooms-details.php">О нас</a></li>
-                <li><a href="about-us.php">Номера</a>
-                <ul class="dropdown">
-                    <li><a href="#">Deluxe Room</a></li>
-                    <li><a href="#">Family Room</a></li>
-                    <li><a href="#">Premium Room</a></li>
-                </ul>
+                <li><a href="about.php">Номера</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Deluxe Room</a></li>
+                        <li><a href="#">Family Room</a></li>
+                        <li><a href="#">Premium Room</a></li>
+                    </ul>
                 </li>
                 <li>
-                <a href="contact.php">Контакты</a>
+                    <a href="contact.php">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -116,12 +116,10 @@
                         </div>
                     </form>
                 </div> -->
-               
+
             </div>
             <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0606825994123!2d-72.8735845851828!3d40.760690042573295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e85b24c9274c91%3A0xf310d41b791bcb71!2sWilliam%20Floyd%20Pkwy%2C%20Mastic%20Beach%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1578582744646!5m2!1sen!2sbd"
-                    height="470" style="border:0;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0606825994123!2d-72.8735845851828!3d40.760690042573295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e85b24c9274c91%3A0xf310d41b791bcb71!2sWilliam%20Floyd%20Pkwy%2C%20Mastic%20Beach%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1578582744646!5m2!1sen!2sbd" height="470" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
     </section>

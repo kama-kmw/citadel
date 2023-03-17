@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="ru">
 <?php include_once 'includes/head.php'; ?>
 
 <body>
@@ -37,7 +37,7 @@
       <ul>
         <li class="active"><a href="index.php">Главная</a></li>
         <li><a href="rooms-details.php">О нас</a></li>
-        <li><a href="about-us.php">Номера</a>
+        <li><a href="about.php">Номера</a>
           <ul class="dropdown">
             <li><a href="#">Deluxe Room</a></li>
             <li><a href="#">Family Room</a></li>

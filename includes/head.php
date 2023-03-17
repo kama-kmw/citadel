@@ -1,11 +1,11 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Sona Template">
-    <meta name="keywords" content="Sona, unica, creative, html">
+    <meta name="description" content="Мы находимся в самом сердце Дербента, откуда в шаговой доступности Крепость Нарын-Кала, Магалы, базары, а также самый большой мультимединый фонтан в России.">
+    <meta name="keywords" content="Отель в Дербенте, гостиница в дербенте">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="noindex" />
-    <title>Sona | Template</title>
+    <!-- <meta name="robots" content="noindex" /> -->
+    <title>Отель Цитадель</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">

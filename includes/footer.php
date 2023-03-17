@@ -38,10 +38,12 @@
               <div class="ft-contact">
                 <h6>Услуги</h6>
                 <ul>
-                  <li>Камера хранения</li>
-                  <li>Трансфер</li>
                   <li>Парковка</li>
+                  <li>Столовая</li>
                   <li>Обслуживание в номерах</li>
+                  <li>Смена белья</li>
+                  <li>Круглосуточное обслуживание</li>
+                  <li>Подача в номер</li>
                 </ul>
               </div>
             </div>
@@ -64,9 +66,10 @@
           <div class="row">
             <div class="col-lg-7">
               <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Номера</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/about.php">О нас</a></li>
+                <li><a href="/#rooms">Номера</a></li>
+                <li><a href="/contact.php">Контакты</a></li>
               </ul>
             </div>
             <div class="col-lg-5">

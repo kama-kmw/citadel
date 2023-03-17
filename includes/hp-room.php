@@ -1,4 +1,4 @@
-<section class="hp-room-section mt100">
+<section class="hp-room-section mt100" id="rooms">
       <div class="container-fluid">
         <div class="hp-room-items">
           <div class="row">

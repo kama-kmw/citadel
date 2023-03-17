@@ -4,19 +4,19 @@
 <?php include_once 'includes/head.php'; ?>
 
 <body>
-<div class="offcanvas-menu-overlay"></div>
-  <div class="canvas-open">
-    <i class="icon_menu"></i>
-  </div>
-  <div class="offcanvas-menu-wrapper">
-    <div class="canvas-close">
-      <i class="icon_close"></i>
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="canvas-open">
+        <i class="icon_menu"></i>
     </div>
-    <!-- <div class="search-icon search-switch">
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="icon_close"></i>
+        </div>
+        <!-- <div class="search-icon search-switch">
         <i class="icon_search"></i>
       </div> -->
-    <div class="header-configure-area">
-      <!-- <div class="language-option">
+        <div class="header-configure-area">
+            <!-- <div class="language-option">
           <img src="img/flag.jpg" alt="" />
           <span>EN <i class="fa fa-angle-down"></i></span>
           <div class="flag-dropdown">
@@ -26,34 +26,34 @@
             </ul>
           </div>
         </div> -->
-      <a href="tel:89659287777" class="bk-btn">Позвонить</a>
+            <a href="tel:89659287777" class="bk-btn">Позвонить</a>
+        </div>
+        <nav class="mainmenu mobile-menu">
+            <ul>
+                <li class="active"><a href="index.php">Главная</a></li>
+                <li><a href="rooms-details.php">О нас</a></li>
+                <li><a href="about.php">Номера</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Deluxe Room</a></li>
+                        <li><a href="#">Family Room</a></li>
+                        <li><a href="#">Premium Room</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.php">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="top-social">
+            <a href="#"><i class="fa fa-whatsapp"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+        <ul class="top-widget">
+            <li><a href="tel:89659287777"><i class="fa fa-phone"></i> +7 (965) 928-77-77</a></li>
+            <li><a href="tel:89285433344"><i class="fa fa-phone"></i> +7 (928) 543-33-44</a></li>
+        </ul>
     </div>
-    <nav class="mainmenu mobile-menu">
-      <ul>
-        <li class="active"><a href="index.php">Главная</a></li>
-        <li><a href="rooms-details.php">О нас</a></li>
-        <li><a href="about-us.php">Номера</a>
-          <ul class="dropdown">
-            <li><a href="#">Deluxe Room</a></li>
-            <li><a href="#">Family Room</a></li>
-            <li><a href="#">Premium Room</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="contact.php">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-    <div id="mobile-menu-wrap"></div>
-    <div class="top-social">
-      <a href="#"><i class="fa fa-whatsapp"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-    </div>
-    <ul class="top-widget">
-      <li><a href="tel:89659287777"><i class="fa fa-phone"></i> +7 (965) 928-77-77</a></li>
-      <li><a href="tel:89285433344"><i class="fa fa-phone"></i> +7 (928) 543-33-44</a></li>
-    </ul>
-  </div>
     <!-- Header Section Begin -->
     <?php include 'includes/header.php'; ?>
 
