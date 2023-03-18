@@ -51,10 +51,12 @@
                 <li><a href="/about.php">О нас</a></li>
 
                 <li>
-                  <a href="">Номера</a>
+                  <a href="/rooms.php">Номера</a>
                   <ul class="dropdown">
-                    <li><a href="/room-details.php">Люкс</a></li>
-                    <li><a href="/room-details.php">Стандарт</a></li>
+                    <li><a href="/room1.php">Стандарт+</a></li>
+                    <li><a href="/room2.php">Джуниор дабл</a></li>
+                    <li><a href="/room3.php">Джуниор твин</a></li>
+                    <li><a href="/room4.php">Люкс</a></li>
                   </ul>
                 </li>
                 <!-- <li><a href="./blog.html">News</a></li> -->

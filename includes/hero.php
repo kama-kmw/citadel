@@ -1,4 +1,4 @@
-<section class="hero-section">
+<section class="hero-section mb100">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">

@@ -68,7 +68,7 @@
               <ul>
                 <li><a href="/">Главная</a></li>
                 <li><a href="/about.php">О нас</a></li>
-                <li><a href="/#rooms">Номера</a></li>
+                <li><a href="/rooms.php">Номера</a></li>
                 <li><a href="/contact.php">Контакты</a></li>
               </ul>
             </div>

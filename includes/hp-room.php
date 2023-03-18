@@ -1,11 +1,11 @@
-<section class="hp-room-section mt100" id="rooms">
+<section class="hp-room-section mb100" id="rooms">
       <div class="container-fluid">
         <div class="hp-room-items">
           <div class="row">
             <div class="col-lg-3 col-md-6">
               <div
                 class="hp-room-item set-bg"
-                data-setbg="img/room/room-b1.jpg"
+                data-setbg="/img/room/room-b1.jpg"
               >
                 <div class="hr-text">
                   <h3>Люкс</h3>
@@ -37,7 +37,7 @@
             <div class="col-lg-3 col-md-6">
               <div
                 class="hp-room-item set-bg"
-                data-setbg="img/room/room-b2.jpg"
+                data-setbg="/img/room/room-b2.jpg"
               >
                 <div class="hr-text">
                   <h3>Джуниор Твин</h3>
@@ -69,7 +69,7 @@
             <div class="col-lg-3 col-md-6">
               <div
                 class="hp-room-item set-bg"
-                data-setbg="img/room/room-b3.jpg"
+                data-setbg="/img/room/room-b3.jpg"
               >
                 <div class="hr-text">
                 <h3>Джуниор Дабл</h3>
@@ -101,7 +101,7 @@
             <div class="col-lg-3 col-md-6">
               <div
                 class="hp-room-item set-bg"
-                data-setbg="img/room/room-b4.jpg"
+                data-setbg="/img/room/room-b1.jpg"
               >
                 <div class="hr-text">
                 <h3>Стандарт +</h3>
