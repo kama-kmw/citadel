@@ -1,0 +1,76 @@
+.tag__section {
+    width: 100%;
+    min-height: 50px;
+    /* background: #fff; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+}
+.tag__item {
+    /* display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+    position: relative;
+    padding: 10px;
+    transition: 0.3s; */
+
+    margin: 0 8px 8px 0;
+    font-size: 14px;
+    list-style: 24px;
+    font-weight: normal;
+    color: #000033;
+    padding: 6px 18px;
+    border: 1px solid rgba(0, 0, 51, 0.3);
+    border-radius: 4px;
+    transition: 0.2s;
+    text-transform: capitalize;
+    position: relative;
+}
+.tag__item:hover {
+    /* cursor: pointer; */
+    background-color: #d9d9ec;
+    border-radius: 5px;
+}
+.del-icon {
+    display: none;
+    width: 20px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    transition: 0.3s;
+}
+.tag__item:hover .del-icon {
+    display: block;
+    cursor: pointer;
+}
+.galery__section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* padding: 5px; */
+}
+.galery__item {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+.galery__item__close {
+    display: none;
+    width: 20px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    transition: 0.3s;
+}
+.galery__item:hover .galery__item__close {
+    display: block;
+    cursor: pointer;
+}
+.galery__item-img {
+    height: 100px;
+    border-radius: 8px;
+}

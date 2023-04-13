@@ -559,6 +559,11 @@ ol {
   padding: 44px 40px 50px 40px;
   border-radius: 4px;
 }
+@media (max-width: 500px) {
+  .booking-form {
+    background: rgba(255,255,255, .4);
+  }
+}
 .booking-form h3 {
   color: #19191a;
   margin-bottom: 36px;

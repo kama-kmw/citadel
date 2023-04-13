@@ -32,8 +32,11 @@
             <div class="select-option">
               <label for="room">Номера:</label>
               <select id="room">
-                <option value="">1 местный</option>
-                <option value="">2 местный</option>
+                <option value="">Номера</option>
+                <option value="">Стандарт +</option>
+                <option value="">Джуниор Дабл</option>
+                <option value="">Джуниор Твин</option>
+                <option value="">Люкс</option>
               </select>
             </div>
             <button type="submit">Найти номер</button>
