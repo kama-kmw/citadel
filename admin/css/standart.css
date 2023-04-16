@@ -80,3 +80,14 @@ a {
     width: 300px;
     flex-basis: 300px;
 }
+.flaticon-icon-block i {
+    color: #dfa974;
+    margin-right: 8px;
+}
+.flaticon-icon-block i.active {
+    color: darkcyan;
+}
+.flaticon-icon-block i:hover {
+    cursor: pointer;
+    color:blue;
+}

@@ -1,11 +1,11 @@
 (function () {
-  const el_icons = document.querySelector("#service .fa-icon");
-  el_icons.addEventListener("click", show_popup);
+  const el_icons = document.querySelector(".flaticon-icon-block");
+  el_icons.addEventListener("click", icon_active);
 
-  function show_popup(e) {
+  function icon_active(e) {
     e.preventDefault();
 
-    const child_arr = el_icons.querySelectorAll(".fas");
+    const child_arr = el_icons.querySelectorAll("i");
     const icon_input = document.querySelector("#service #icon_input");
     const child = e.target;
 

@@ -2,23 +2,23 @@
    <h2 class="h2 mb20">Услуги</h2>
    <form method="POST" action="/admin/modules/service/add.php" class="admin-form mb20">
 
-      <div class="flex mb10">
-         <input id="icon_input" name="icon" style="display: none;">
 
-         <label class="admin-label w-33 mr20">
-            <p class="admin-label__text">Заголовок</p>
-            <input type="text" name="title" class="admin-input">
-         </label>
+      <input id="icon_input" name="icon" style="display: none;">
 
-         <label class="admin-label">
-            <p class="admin-label__text">Иконка</p>
-            <?php include '../../includes/icon_list.php' ?>
-         </label>
-      </div>
+      <label class="admin-label mb10">
+         <p class="admin-label__text">Заголовок</p>
+         <input name="title" class="admin-input">
+      </label>
+
+      <label class="admin-label mb10">
+         <p class="admin-label__text">Иконка</p>
+         <?php include '../../includes/icon_list.php' ?>
+      </label>
+
 
       <label class="admin-label mb10">
          <p class="admin-label__text">Описание</p>
-         <input type="text" name="description" class="admin-input">
+         <input name="description" class="admin-input">
       </label>
 
       <input type="submit" value="Добавить" class="admin-submit">
@@ -43,8 +43,8 @@
             <div><div class="span-title w-150 mr20">' . $catalog_item["title"] . '</div></div>
             <span class="span-desc">' . $catalog_item["description"] . '</span>
             <div class="reform">
-               <img class="edit-service" src="/assets/img/icons/edit-icon.png">
-               <img class="del-service" src="/assets/img/icons/del-icon.png">
+               <!--<img class="edit-service" src="/img/icons/edit-icon.png">-->
+               <img class="del-service" src="/img/icons/del-icon.png">
             </div>
          </div>';
       }

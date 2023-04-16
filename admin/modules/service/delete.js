@@ -6,7 +6,7 @@
 
   function del_item(e) {
     e.preventDefault();
-    let is_delete = confirm("Удалить плитку?");
+    let is_delete = confirm("Удалить сервис?");
     if (!is_delete) {
       console.log("отмена удаления");
       return;
@@ -28,7 +28,7 @@
         window.location.reload();
       })
       .catch(() => {
-        console.log("Ошибка удаления");
+        alert("Ошибка удаления");
       });
   }
 })();

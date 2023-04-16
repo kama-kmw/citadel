@@ -24,11 +24,13 @@ if (!$connection) {
 	<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   	<link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   	<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/flaticon.css" type="text/css">
 
 	<link rel="stylesheet" href="/admin/css/standart.css">
 	<link rel="stylesheet" href="/admin/css/admin.css">
 	<link rel="stylesheet" href="/admin/css/popup.css">
 	<link rel="stylesheet" href="/admin/css/tag.css">
+
 
 	<title>Административная панель Hotel-Citadel</title>
 
@@ -46,11 +48,14 @@ if (!$connection) {
 		<h1 class="h1 m0">Главная страница</h1>
 		<?php
 		include '../../modules/slider/admin_section.php';
+		include '../../modules/service/admin_section.php';
+
+
 		include '../../modules/service-block/admin_section.php';
 		include '../../modules/about/admin_section.php';
 		include '../../modules/grid/admin_section.php';
 		include '../../modules/advantage/admin_section.php';
-		include '../../modules/service/admin_section.php';
+		
 		include '../../modules/specialization/admin_section.php';
 		include '../../modules/feedback/admin_section.php';
 		include '../../modules/doctor/admin_section.php';
