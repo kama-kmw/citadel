@@ -1,11 +1,12 @@
 
 (function () {
-   const del_btn = document.querySelectorAll(".del-slide");
+   const del_btn = document.querySelectorAll(".slider__section .del-icon");
    for (let i=0; i<del_btn.length; i++) {
-      del_btn[i].addEventListener("click", del_category);
+      console.log(del_btn[i])
+      del_btn[i].addEventListener("click", del_slide);
    };
  
-   function del_category(e) {
+   function del_slide(e) {
       e.preventDefault();
       let is_delete = confirm('Удалить слайд?');
       if(!is_delete) {
@@ -13,8 +14,8 @@
          return;
       }
      
-      const parent = e.target.closest(".aside__block");
-      let id = parent.querySelector(".span-id").textContent;
+      const parent = e.target.closest(".galery__block");
+      let id = parent.querySelector(".gal-photo-id").textContent;
       let url = '/admin/modules/slider/del_by_id.php';
    
       const formData = new FormData();
@@ -29,7 +30,7 @@
          window.location.reload();
       })
       .catch(() => {
-         console.log("Ошибка удаления");
+         alert("Ошибка удаления");
       });
    }
 })();

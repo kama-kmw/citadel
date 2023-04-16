@@ -1,49 +1,51 @@
+<?php
+include '../../modules/slider/get.php';
+?>
 <div class="admin-page" id="slider">
    <h2 class="h2 mb20">Баннер</h2>
-   <form method="POST" action="/admin/modules/slider/add.php" class="admin-form mb20" enctype="multipart/form-data">
+   <form method="POST" action="/admin/modules/slider/add.php" class="admin-form mb20">
 
       <div class="mb10">
          <label class="admin-label">
             <p class="admin-label__text">Заголовок</p>
-            <input type="text" name="title" class="admin-input">
+            <input name="title" class="admin-input" value="<?php echo $banner['title'] ?>">
          </label>
       </div>
 
       <label class="admin-label">
          <p class="admin-label__text">Описание</p>
-         <textarea name="description" class="admin-textarea mb10"></textarea>
+         <textarea name="description" class="admin-textarea mb10"><?php echo $banner['description'] ?></textarea>
       </label>
 
-      <input type="submit" value="Добавить" class="admin-submit">
+      <input type="submit" value="Изменить" class="admin-submit">
    </form>
 
    <h3 class="h2 mb20" id="product-list">Список слайдов</h3>
-   <div class="max-h-600">
-      <div class="aside__block relative">
-         <span class="d-ib w-150 mr20">Фото</span>
-         <span class="d-ib w-300 mr20">Заголовок</span>
-         <span class="d-ib w-200">Текст на кнопке</span>
-         
+   <form method="POST" action="/admin/modules/slider/add_photo.php" class="admin-form mb20" enctype="multipart/form-data">
+
+      <div class="flex">
+         <label class="admin-label">
+            <p class="admin-label__text">Фото<sup>*</sup></p>
+            <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+            <input type="file" name="photo" class="admin-input-photo">
+         </label>
       </div>
 
+      <input type="submit" value="Добавить" class="admin-submit mt20">
+   </form>
+   <div class="galery__section slider__section">
+          
       <?php
-      $catalog_list = mysqli_query($connection, 'SELECT * FROM `slider` ORDER BY `id`');
+      $catalog_list = mysqli_query($connection, 'SELECT * FROM `slider` ORDER BY `id` DESC');
       while ($catalog_item = mysqli_fetch_assoc($catalog_list)) {
          echo '
-         <div class="aside__block relative">
-            <span class="span-id" style="display: none;" >' . $catalog_item["id"] . '</span>
-            <span class="span-desc" style="display: none;" >' . $catalog_item["description"] . '</span>
-
-            <span class="span-photo w-150 mr20"><img src="/assets/img/slide/' . $catalog_item["photo"] . '"></span>
-            <span class="span-title w-300 mr20">' . $catalog_item["title"] . '</span>
-            <span class="span-btn-text w-200">' . $catalog_item["btn-text"] . '</span>
-            <div class="reform">
-               <img class="edit-slide" src="/assets/img/icons/edit-icon.png">
-               <img class="del-slide" src="/assets/img/icons/del-icon.png">
-            </div>
-         </div>';
+         <div class="galery__block">
+            <img src="/img/slider/'.$catalog_item['photo'].'" class="galery__img">
+            <img class="del-icon" src="/img/icons/del-red-icon.png">
+            <span class="gal-photo-id" style="display: none;">'.$catalog_item['id'].'</span>  
+         </div>
+         ';
       }
-
       ?>
    </div>
 </div>

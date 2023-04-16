@@ -1,10 +1,17 @@
+<?php
+include 'admin/modules/slider/get.php';
+$order   = array("\r\n", "\n", "\r");
+$replace = '<br />';
+$banner_desc = str_replace($order, $replace, $banner['description']);
+?>
+
 <section class="hero-section mb100">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
         <div class="hero-text">
-          <h1>Отель Цитадель</h1>
-          <p>Наше расположение приятно удивит Вас<br>Мы находимся в самом сердце Дербента, откуда в шаговой доступности Крепость Нарын-Кала, Магалы, базары, а также самый большой мультимединый фонтан в России.</p>
+          <h1><?php echo $banner['title'] ?></h1>
+          <p><?php echo $banner_desc ?></p>
           <!-- <a href="#" class="primary-btn">подробнее</a> -->
         </div>
       </div>
@@ -46,9 +53,13 @@
     </div>
   </div>
   <div class="hero-slider owl-carousel">
-    <div class="hs-item set-bg" data-setbg="img/hero/04.jpeg"></div>
-    <div class="hs-item set-bg" data-setbg="img/hero/05.jpeg"></div>
-    <div class="hs-item set-bg" data-setbg="img/hero/06.jpeg"></div>
-    <div class="hs-item set-bg" data-setbg="img/hero/07.jpeg"></div>
+    <?php
+      $catalog_list = mysqli_query($connection, 'SELECT * FROM `slider` ORDER BY `id` DESC');
+      while ($catalog_item = mysqli_fetch_assoc($catalog_list)) {
+         echo '
+         <div class="hs-item set-bg" data-setbg="img/slider/'.$catalog_item['photo'].'"></div>
+         ';
+      }
+      ?>
   </div>
 </section>

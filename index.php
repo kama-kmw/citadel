@@ -3,6 +3,7 @@
 <?php 
 $head_title = 'Отель Цитадель';
 include_once 'includes/head.php';
+include 'admin/connect.php';
 ?>
 
 <body>
