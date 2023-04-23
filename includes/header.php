@@ -39,7 +39,7 @@
         <div class="col-lg-2">
           <div class="logo">
             <a href="/">
-              <img src="img/005.png" /> <span>Hotel-Citadel</span>
+              <img src="img/logo.png" /> <span>Hotel-Citadel</span>
             </a>
           </div>
         </div>
