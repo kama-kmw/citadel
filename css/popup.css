@@ -1,0 +1,54 @@
+.popup-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.7);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    display: none;
+}
+.popup {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    overflow: auto;
+
+}
+.close-popup {
+    height: 20px;
+}
+.popup h2 {
+    color: #333;
+}
+.popup .jc-sb {
+    display: flex;
+    justify-content: space-between;
+}
+.popup p {
+    margin-bottom: 0;
+    color: #333;
+}
+.popup sup {
+    color: red;
+}
+.popup .flex_f-s {
+    display: flex;
+    align-items: center;
+}
+.popup .admin-submit {
+    margin-right: 20px;
+    display: inline-block;
+}
+.popup .cancel {
+    display: inline-block;
+
+}
+.close-popup:hover {
+    cursor: pointer;
+}

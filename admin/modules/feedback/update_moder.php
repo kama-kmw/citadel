@@ -9,7 +9,7 @@ $date = $_POST['date'];
 $town = $_POST['town'];
 
 if ($connection) {
-	mysqli_query($connection, "UPDATE `feedback` SET `name` = '$name', `feedback` = '$feedback', `date` = '$date',`town` = '$town'  WHERE `feedback`.`id` = '$id';");
+	mysqli_query($connection, "UPDATE `feedback` SET `name` = '$name', `feedback` = '$feedback', `date` = '$date', `town` = '$town', `moder` = '1'  WHERE `feedback`.`id` = '$id';");
 }
 
 mysqli_close($connection);

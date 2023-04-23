@@ -2509,3 +2509,19 @@ ol {
     height: 165px;
   }
 }
+.btn {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #dfa974;
+  padding: 14px 28px 13px;
+}
+.flex__jc-sb {
+  display: flex;
+  justify-content: space-between;
+}
+.mb20 {
+  margin-bottom: 20px;
+}

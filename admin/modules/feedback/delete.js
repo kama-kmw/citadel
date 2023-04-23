@@ -28,7 +28,7 @@
         window.location.reload();
       })
       .catch(() => {
-        console.log("Ошибка удаления");
+        alert("Ошибка удаления");
       });
   }
 })();

@@ -49,18 +49,19 @@ if (!$connection) {
 		<?php
 		include '../../modules/slider/admin_section.php';
 		include '../../modules/service/admin_section.php';
-
-
-		include '../../modules/service-block/admin_section.php';
-		include '../../modules/about/admin_section.php';
-		include '../../modules/grid/admin_section.php';
-		include '../../modules/advantage/admin_section.php';
-		
-		include '../../modules/specialization/admin_section.php';
 		include '../../modules/feedback/admin_section.php';
-		include '../../modules/doctor/admin_section.php';
-		include '../../modules/galery/admin_section.php';
-		include '../../modules/faq/admin_section.php';
+
+
+		// include '../../modules/service-block/admin_section.php';
+		// include '../../modules/about/admin_section.php';
+		// include '../../modules/grid/admin_section.php';
+		// include '../../modules/advantage/admin_section.php';
+		
+		// include '../../modules/specialization/admin_section.php';
+		
+		// include '../../modules/doctor/admin_section.php';
+		// include '../../modules/galery/admin_section.php';
+		// include '../../modules/faq/admin_section.php';
 		?>
 	</section>
 </main>

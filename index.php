@@ -41,6 +41,7 @@ include 'admin/connect.php';
   <script src="js/jquery.slicknav.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/feedback.js"></script>
 </body>
 
 </html>

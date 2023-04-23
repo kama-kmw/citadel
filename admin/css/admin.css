@@ -171,6 +171,20 @@
 .del-submit:hover {
   background: linear-gradient(rgb(204, 58, 14), rgb(172, 59, 15));
 }
+.admin-submit_del {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 0;
+  background: linear-gradient(rgb(223, 45, 45), rgb(86, 22, 22));
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+.admin-submit_del:hover {
+  background: linear-gradient(rgb(86, 22, 22), rgb(223, 45, 45));
+}
 
 .span-id {
   display: inline-block;
