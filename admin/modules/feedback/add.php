@@ -13,8 +13,8 @@ $message = 'Вам пришел отзыв с сайта от пользоват
 
 if($connection) {
     mysqli_query($connection, "INSERT INTO `feedback` (`id`, `name`, `town`,  `feedback`, `date`, `moder`) VALUES (NULL, '$name', '$town', '$feedback', '$date', '$moder');"); 
-   //  mail('surha_dag@mail.ru', 'Отзыв с сайта Hotel-Citadel.ru', $message);
-   //  mail('art.hotel.essentuki@mail.ru', 'Отзыв с сайта Hotel-Citadel.ru.ru', $message);
+    mail('hotel-citadel@mail.ru', 'Отзыв с сайта Hotel-Citadel.ru.ru', $message);
+    mail('surha_dag@mail.ru', 'Отзыв с сайта Hotel-Citadel.ru', $message);
 }
 
 

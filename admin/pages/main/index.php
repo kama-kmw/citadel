@@ -50,6 +50,7 @@ if (!$connection) {
 		include '../../modules/slider/admin_section.php';
 		include '../../modules/service/admin_section.php';
 		include '../../modules/feedback/admin_section.php';
+		include '../../modules/attraction/admin_section.php';
 
 
 		// include '../../modules/service-block/admin_section.php';

@@ -8,69 +8,25 @@
             </div>
           </div>
         </div>
+
         <div class="row">
+        <?php
+        $catalog_list = mysqli_query($connection, 'SELECT * FROM `attraction` ORDER BY `id`');
+
+        while ($catalog_item = mysqli_fetch_assoc($catalog_list)) {
+          echo '
           <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/01.jpg">
+            <div class="blog-item set-bg" data-setbg="img/attraction/' . $catalog_item["photo"] . '">
               <div class="bi-text">
-                <!-- <span class="b-tag">Travel Trip</span> -->
-                <h4><a>Крепость Нарын-Кала</a> </h4>
-                <div class="b-time">
-                   <!-- <i class="icon_clock_alt"></i> 15th April, 2019 -->
-                  Древнейшее сооружение на Кавказе
-                </div>
+                <h4><a>' . $catalog_item["name"] . '</a></h4>
+                <div class="b-time">' . $catalog_item["description"] . '</div>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/02.jpg">
-              <div class="bi-text">
-                <h4><a>Магалы</a></h4>
-                <div class="b-time">
-                  Исторические места Дербента
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/03.jpg">
-              <div class="bi-text">
-                <h4><a>Фонтан</a></h4>
-                <div class="b-time">
-                  Самый большой фонтан в России
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/04.jpg">
-              <div class="bi-text">
-                <h4><a>Дом Петра</a></h4>
-                <div class="b-time">
-                  Резиденция Петра Первого
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/05.jpg">
-              <div class="bi-text">
-                <h4><a>Набережная</a></h4>
-                <div class="b-time">
-                  Одно из самых посещаемых мест
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="blog-item set-bg" data-setbg="img/blog/06.jpg">
-              <div class="bi-text">
-                <h4><a>Базары</a></h4>
-                <div class="b-time">
-                  Самые вкусные продукты
-                </div>
-              </div>
-            </div>
-          </div>
+          ';
+        }
+        ?>
+          
         </div>
       </div>
     </section>

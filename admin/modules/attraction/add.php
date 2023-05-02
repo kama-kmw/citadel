@@ -1,16 +1,15 @@
 <?php
-include "../../connect.php";
 
-$id = $_POST['id'];
+include '../../connect.php';
+
 $name = $_POST['name'];
-$member = $_POST['member'];
+$description = $_POST['description'];
 $photo;
 
-// если была произведена отправка фото 
+// если была произведена отправка формы
 if (isset($_FILES['photo'])) {
 	// проверяем, можно ли загружать изображение
 	$check = can_upload($_FILES['photo']);
-
 	if ($check === true) {
 		// загружаем изображение на сервер
 		make_upload($_FILES['photo']);
@@ -20,12 +19,9 @@ if (isset($_FILES['photo'])) {
 		echo "<strong>$check</strong>";
 	}
 }
-if ($connection) {
-	mysqli_query($connection, "UPDATE `doctor` SET `name` = '$name', `member` = '$member'  WHERE `doctor`.`id` = '$id';");
 
-	if ($photo) {
-		mysqli_query($connection, "UPDATE `doctor` SET `photo` = '$photo' WHERE `doctor`.`id` = '$id';");
-	}
+if ($connection) {
+	mysqli_query($connection, "INSERT INTO `attraction` (`id`, `name`, `description`, `photo`) VALUES (NULL, '$name', '$description', '$photo');");
 }
 
 function can_upload($file)
@@ -51,10 +47,10 @@ function can_upload($file)
 
 function make_upload($file)
 {
-	// формируем уникальное имя картинки: случайное число и name
-	$name = "r-" . mt_rand(0, 10000) . "-" . $file['name'];
+	// формируем уникальное имя картинки: name и случайное число
+	$name = 'r-' . mt_rand(0, 10000) . $file['name'];
 	// формируем путь к папке загрузки
-	$uploaddir = '../../../assets/img/doctors/';
+	$uploaddir = '../../../img/attraction/';
 	$uploadfile = $uploaddir . basename($name);
 	// переносим файл в папку
 	move_uploaded_file($file['tmp_name'], $uploadfile);
@@ -63,6 +59,6 @@ function make_upload($file)
 }
 
 mysqli_close($connection);
-echo '<script>location.replace("/admin/pages/main/#doctor");</script>';
+echo '<script>location.replace("/admin/pages/main/#attraction");</script>';
 // header('Location: http://');
 exit;
