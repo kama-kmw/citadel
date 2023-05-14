@@ -29,10 +29,10 @@
          <span class="admin-submit mb10" id="btn_add_photo">Добавить фото</span>
       </div>
       <div class="galery__section">
-         <div class="galery__block">
+         <!-- <div class="galery__block">
             <img src="/img/slider/s-35907.jpeg" class="galery__img">
             <img class="del-icon" src="/img/icons/del-red-icon.png">
-         </div>
+         </div> -->
       </div>
       <!-- <input type="submit" value="Добавить номер" class="admin-submit mt20"> -->
    </form>
@@ -40,10 +40,10 @@
 </div>
 
 
-<!-- <?php
+<?php
 // include 'modules/product/del_product_popup.php';
 // include '../../modules/slider/popup_edit_slide.php';
-?> -->
+?>
 <script src="/admin/modules/rooms/add_photo.js"></script>
-<!-- <script src="/admin/modules/slider/delete.js"></script>
-<script src="/admin/modules/slider/edit.js"></script> -->
+<script src="/admin/modules/rooms/del_photo.js"></script>
+<!-- <script src="/admin/modules/slider/edit.js"></script> -->

@@ -1,5 +1,4 @@
 (function () {
-   console.clear();
 
    const input_photo = document.querySelector('#input_photo');
    const btn_add_photo = document.querySelector('#btn_add_photo');
@@ -43,6 +42,7 @@
 
       const photo_block = document.createElement('div')
       photo_block.classList.add('galery__block')
+      photo_block.classList.add('mb10')
       photo_block.append(imageEl)
       photo_block.append(del_icon)
 
