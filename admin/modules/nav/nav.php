@@ -4,6 +4,11 @@
          class="menu-admin__item <?php if ($nav_active == 'Главная') echo 'menu-admin__item_active'; ?>" 
          href="/admin/pages/main/"
       >Главная</a>
+
+      <a 
+         class="menu-admin__item <?php if ($nav_active == 'Номера') echo 'menu-admin__item_active'; ?>" 
+         href="/admin/pages/rooms/"
+      >Номера</a>
    
       <a 
          class="menu-admin__item <?php if ($nav_active == 'Настройки') echo 'menu-admin__item_active'; ?>" 
