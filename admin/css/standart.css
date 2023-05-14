@@ -46,6 +46,9 @@ a {
 .flex-wrap {
     flex-wrap: wrap;
 }
+.d-none {
+    display: none;
+}
 .w-48 {
     width: 48%;
 }

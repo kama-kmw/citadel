@@ -1,4 +1,3 @@
-
 <div class="admin-page" id="rooms">
    <h2 class="h2 mb20">Добавить номер</h2>
    <form method="POST" action="/admin/modules/rooms/add.php" class="admin-form mb20">
@@ -26,36 +25,25 @@
 
       <h4 class="mb10">Слайдер</h4>
       <div class="flex">
-         <label class="admin-label mr20">
-            <!-- <p class="admin-label__text">Слайдер<sup>*</sup></p> -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
-            <input type="file" name="photo" class="admin-input-photo">
-         </label>
-
-         <span class="admin-submit">Добавить фото</span>
+         <input type="file" name="photo" class="d-none" id="input_photo">
+         <span class="admin-submit mb10" id="btn_add_photo">Добавить фото</span>
       </div>
-      <input type="submit" value="Добавить номер" class="admin-submit mt20">
-   </form>
-   <div class="galery__section slider__section">
-      <?php
-      $catalog_list = mysqli_query($connection, 'SELECT * FROM `slider` ORDER BY `id` DESC');
-      while ($catalog_item = mysqli_fetch_assoc($catalog_list)) {
-         echo '
+      <div class="galery__section">
          <div class="galery__block">
-            <img src="/img/slider/'.$catalog_item['photo'].'" class="galery__img">
+            <img src="/img/slider/s-35907.jpeg" class="galery__img">
             <img class="del-icon" src="/img/icons/del-red-icon.png">
-            <span class="gal-photo-id" style="display: none;">'.$catalog_item['id'].'</span>  
          </div>
-         ';
-      }
-      ?>
-   </div>
+      </div>
+      <!-- <input type="submit" value="Добавить номер" class="admin-submit mt20"> -->
+   </form>
+
 </div>
 
 
-<?php
+<!-- <?php
 // include 'modules/product/del_product_popup.php';
-include '../../modules/slider/popup_edit_slide.php';
-?>
-<script src="/admin/modules/slider/delete.js"></script>
-<script src="/admin/modules/slider/edit.js"></script>
+// include '../../modules/slider/popup_edit_slide.php';
+?> -->
+<script src="/admin/modules/rooms/add_photo.js"></script>
+<!-- <script src="/admin/modules/slider/delete.js"></script>
+<script src="/admin/modules/slider/edit.js"></script> -->
