@@ -28,10 +28,30 @@
          <input type="file" name="photo" class="d-none" id="input_photo">
          <span class="admin-submit mb10" id="btn_add_photo">Добавить фото</span>
       </div>
-      <div class="galery__section">
+      <div class="galery__section mb20">
          <!-- <div class="galery__block">
             <img src="/img/slider/s-35907.jpeg" class="galery__img">
             <img class="del-icon" src="/img/icons/del-red-icon.png">
+         </div> -->
+      </div>
+
+      <h4 class="mb10">Характеристики номера</h4>
+      <div class="flex mb10">
+         <label class="admin-label mr20 w-200">
+            <input id="prop_inp" name="" class="admin-input" value="" placeholder="Свойство">
+         </label>
+         <label class="admin-label w-200 mr20">
+            <input id="desc_inp" name="" class="admin-input" value="" placeholder="Значение">
+         </label>
+         <label class="admin-label w-200">
+            <span class="admin-submit" id="prop_btn">Добавить</span>
+         </label>
+      </div>
+      <div class="property__section">
+         <!-- <div class="flex property__item">
+            <div class="admin-label mr20 w-200">sdfd</div>
+            <div class="admin-label mr20 w-200">sdfsd</div>
+            <div class="admin-label t-red">Удалить</div>
          </div> -->
       </div>
       <!-- <input type="submit" value="Добавить номер" class="admin-submit mt20"> -->
@@ -46,4 +66,6 @@
 ?>
 <script src="/admin/modules/rooms/add_photo.js"></script>
 <script src="/admin/modules/rooms/del_photo.js"></script>
+<script src="/admin/modules/rooms/add_props.js"></script>
+<script src="/admin/modules/rooms/del_props.js"></script>
 <!-- <script src="/admin/modules/slider/edit.js"></script> -->
