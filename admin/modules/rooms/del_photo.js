@@ -1,6 +1,5 @@
 (function () {
-   console.clear();
-
+   
    const input_photo = document.querySelector('#input_photo');
    const btn_add_photo = document.querySelector('#btn_add_photo');
    const photo_section = document.querySelector('#rooms .galery__section')

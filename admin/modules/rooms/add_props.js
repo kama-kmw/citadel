@@ -30,12 +30,14 @@
       div_prop.classList.add('admin-label')
       div_prop.classList.add('mr20')
       div_prop.classList.add('w-200')
+      div_prop.id = 'prop'
       div_prop.textContent = prop
 
       const div_desc = document.createElement('div')
       div_desc.classList.add('admin-label')
       div_desc.classList.add('mr20')
       div_desc.classList.add('w-200')
+      div_desc.id = 'desc'
       div_desc.textContent = desc
 
       const del_btn = document.createElement('div')

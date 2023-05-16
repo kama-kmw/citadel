@@ -2,10 +2,15 @@
 
 include '../../connect.php';
 
-$name = $_POST['title'];
+$props = $_POST['props'];
 $price = $_POST['price'];
+$title = $_POST['title'];
 $description = $_POST['description'];
-$photo;
+
+if ($connection) {
+	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `props`, `description`) VALUES (NULL, '$title', '$price', '$props', '$description');");
+}
+exit($props);
 
 // если была произведена отправка формы
 if (isset($_FILES['photo'])) {
