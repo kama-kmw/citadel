@@ -62,6 +62,34 @@
       >
    </form>
 
+   <h2 class="h2 mb20" id="product-list">Список номеров</h2>
+   <div class="max-h-600">
+      <div class="aside__block relative">
+         <span class="d-ib w-200 mr20">Номер</span>
+         <span class="d-ib w-150 mr20">Цена</span>
+         <span class="d-ib">Описание</span>
+      </div>
+
+      <?php
+      $catalog_list = mysqli_query($connection, 'SELECT * FROM `room` ORDER BY `id`');
+      while ($catalog_item = mysqli_fetch_assoc($catalog_list)) {
+         echo '
+         <div class="aside__block relative fa-icon">
+            <span class="span-id" style="display: none;" >' . $catalog_item["id"] . '</span>
+
+            <div class="span-icon w-200 mr20">' . $catalog_item["title"] . '</div>
+            <div class="span-title w-150 mr20">' . $catalog_item["price"] . '</div>
+            <span class="span-desc">' . $catalog_item["description"] . '</span>
+            <div class="reform">
+               <img class="edit-service" src="/img/icons/edit-icon.png">
+               <img class="del-service" src="/img/icons/del-icon.png">
+            </div>
+         </div>';
+      }
+
+      ?>
+   </div>
+
 </div>
 
 
