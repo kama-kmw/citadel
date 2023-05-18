@@ -1,89 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 <?php
+include 'admin/connect.php';
 
-$head_title = 'Стандарт+';
+$id = $_GET['id'];
+$catalog_list = mysqli_query($connection, "SELECT * FROM `room` where id = $id ");
+$catalog_item = mysqli_fetch_assoc($catalog_list);
+$head_title = 'Отель Цитадель. Номер ' . $catalog_item['title'];
+$page_title = $catalog_item['title'];
+$price = $catalog_item['price'];
+$desc = $catalog_item['description'];
+$order   = array("\r\n", "\n", "\r");
+$replace = '</p><p>';
+$desc = str_replace($order, $replace, $desc);
+$props = json_decode($catalog_item["props"]);
+
+
+
 include_once 'includes/head.php';
 ?>
 
 <body>
-    
-    <!-- Nav -->
-    <?php include 'includes/nav.php'; ?>
 
-    <!-- Header -->
-    <?php include 'includes/header.php'; ?>
+  <!-- Nav -->
+  <?php include 'includes/nav.php'; ?>
 
-    <!-- Breadcrumb Section Begin -->
-    <div class="breadcrumb-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb-text">
-                        <h2>Стандарт +</h2>
-                    </div>
-                </div>
-            </div>
+  <!-- Header -->
+  <?php include 'includes/header.php'; ?>
+
+  <!-- Breadcrumb Section Begin -->
+  <div class="breadcrumb-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="breadcrumb-text">
+            <h2><?php echo $page_title; ?></h2>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
 
-    <!-- Room Details Section Begin -->
-    <section class="room-details-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="room-details-item">
+  <!-- Room Details Section Begin -->
+  <section class="room-details-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="room-details-item">
 
-                        <!-- <img src="img/room/room-details.jpg" alt=""> -->
-                        <div class="hero-slider owl-carousel hero-slider-rooms mb30">
-                            <div class="hs-item set-bg" data-setbg="img/room/Стандарт01.JPG"></div>
-                            <div class="hs-item set-bg" data-setbg="img/room/Стандарт02.JPG"></div>
-                            <div class="hs-item set-bg" data-setbg="img/room/Стандарт03.JPG"></div>
-                            <div class="hs-item set-bg" data-setbg="img/room/Стандарт04.JPG"></div>
-                        </div>
-                        <div class="rd-text">
-                            <div class="rd-title">
-                                <h3>Стандарт+</h3>
-                                <div class="rdt-right">
-                                    <!-- <div class="rating">
+            <!-- <img src="img/room/room-details.jpg" alt=""> -->
+            <div class="hero-slider owl-carousel hero-slider-rooms mb30">
+              <div class="hs-item set-bg" data-setbg="img/room/Стандарт01.JPG"></div>
+              <div class="hs-item set-bg" data-setbg="img/room/Стандарт02.JPG"></div>
+              <div class="hs-item set-bg" data-setbg="img/room/Стандарт03.JPG"></div>
+              <div class="hs-item set-bg" data-setbg="img/room/Стандарт04.JPG"></div>
+            </div>
+            <div class="rd-text">
+              <div class="rd-title">
+                <h3>Стандарт+</h3>
+                <div class="rdt-right">
+                  <!-- <div class="rating">
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star-half_alt"></i>
                                     </div> -->
-                                    <a href="#">Позвонить</a>
-                                </div>
-                            </div>
-                            <h2>от 7500<span>/ночь</span></h2>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Площадь:</td>
-                                        <td>35-50 кв</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Вместимость:</td>
-                                        <td>До 6 чел</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Номера:</td>
-                                        <td>6 номеров</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Включено:</td>
-                                        <td>Wifi, Кондиционер, Смарт ТВ, Холодильник</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="f-para">
-                                Мы находимся в самом сердце Дербента, в шаговой доступности Крепость Нарын-Кала, Магалы, базары, а также самый большой мультимединый фонтан в России.</p>
-                            <p>Отель "Cidadel" сочетает в себе любезное, профессиональное обслуживание с выдающимися удобствами, включая полный спектр услуг.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- <div class="rd-reviews">
+                  <a href="#">Позвонить</a>
+                </div>
+              </div>
+              <h2><?php echo $price; ?><span>/ночь</span></h2>
+              <table>
+                <tbody>
+                  <?php
+                  for ($i = 0; $i < count($props); $i++) {
+                    echo '
+                    <tr>
+                      <td class="r-o">' . $props[$i]->prop . ':</td>
+                      <td>' . $props[$i]->desc . '</td>
+                    </tr>';
+                  }
+                  ?>
+                </tbody>
+              </table>
+              <p class="f-para"><?php echo $desc; ?></p>
+            </div>
+          </div>
+          <!-- <div class="rd-reviews">
                         <h4>Reviews</h4>
                         <div class="review-item">
                             <div class="ri-pic">
@@ -151,71 +155,71 @@ include_once 'includes/head.php';
                             </div>
                         </form>
                     </div> -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="room-booking">
-                        <h3>Заполните</h3>
-                        <form action="#">
-                            <div class="check-date">
-                                <label for="date-in">Въезд:</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="check-date">
-                                <label for="date-out">Выезд:</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="select-option">
-                                <!-- <label for="guest">Гости:</label> -->
-                                <!-- <select id="guest">
-                                    <option value="">3 Adults</option>
-                                </select> -->
-
-                                <!-- <select id="guest">
-                                    <option value="">3 Adults</option>
-                                </select> -->
-                            </div>
-                            <div class="select-option">
-                                <label for="room">Номера:</label>
-                                <select id="room">
-                                    <option value="">1 местный</option>
-                                </select>
-                            </div>
-                            <button type="submit">Забронировать</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-    <!-- Room Details Section End -->
+        <div class="col-lg-4">
+          <div class="room-booking">
+            <h3>Заполните</h3>
+            <form action="#">
+              <div class="check-date">
+                <label for="date-in">Въезд:</label>
+                <input type="text" class="date-input" id="date-in">
+                <i class="icon_calendar"></i>
+              </div>
+              <div class="check-date">
+                <label for="date-out">Выезд:</label>
+                <input type="text" class="date-input" id="date-out">
+                <i class="icon_calendar"></i>
+              </div>
+              <div class="select-option">
+                <!-- <label for="guest">Гости:</label> -->
+                <!-- <select id="guest">
+                                    <option value="">3 Adults</option>
+                                </select> -->
 
-    <!-- Footer Section Begin -->
-    <?php include 'includes/footer.php'; ?>
-
-    <!-- Footer Section End -->
-
-    <!-- Search model Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch"><i class="icon_close"></i></div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
+                <!-- <select id="guest">
+                                    <option value="">3 Adults</option>
+                                </select> -->
+              </div>
+              <div class="select-option">
+                <label for="room">Номера:</label>
+                <select id="room" disabled>
+                  <option value=""><?php echo $page_title; ?></option>
+                </select>
+              </div>
+              <button type="submit">Забронировать</button>
             </form>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Search model end -->
+  </section>
+  <!-- Room Details Section End -->
 
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+  <!-- Footer Section Begin -->
+  <?php include 'includes/footer.php'; ?>
+
+  <!-- Footer Section End -->
+
+  <!-- Search model Begin -->
+  <div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+      <div class="search-close-switch"><i class="icon_close"></i></div>
+      <form class="search-model-form">
+        <input type="text" id="search-input" placeholder="Search here.....">
+      </form>
+    </div>
+  </div>
+  <!-- Search model end -->
+
+  <!-- Js Plugins -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
