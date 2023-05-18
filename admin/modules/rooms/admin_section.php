@@ -102,4 +102,4 @@
 <script src="/admin/modules/rooms/add_props.js"></script>
 <script src="/admin/modules/rooms/del_props.js"></script>
 <script src="/admin/modules/rooms/send.js"></script>
-<!-- <script src="/admin/modules/slider/edit.js"></script> -->
+<script src="/admin/modules/rooms/del_room.js"></script>
