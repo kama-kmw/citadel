@@ -53,6 +53,7 @@
 
 .aside__block {
   /* max-height: 100px; */
+  width: 100%;
   overflow: auto;
   position: relative;
   padding: 20px;

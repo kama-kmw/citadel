@@ -67,21 +67,30 @@ a {
 .w-66 {
     width: 66%;
 }
+.w-80 {
+    width: 80px;
+    flex-basis: 80px;
+    flex-shrink: 0;
+}
 .w-100 {
     width: 100px;
     flex-basis: 100px;
+    flex-shrink: 0;
 }
 .w-150 {
     width: 150px;
     flex-basis: 150px;
+    flex-shrink: 0;
 }
 .w-200 {
     width: 200px;
     flex-basis: 200px;
+    flex-shrink: 0;
 }
 .w-300 {
     width: 300px;
     flex-basis: 300px;
+    flex-shrink: 0;
 }
 .flaticon-icon-block i {
     color: #dfa974;
