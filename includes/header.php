@@ -1,3 +1,7 @@
+<?php
+include 'admin/connect.php';
+$catalog_list = mysqli_query($connection, 'SELECT * FROM `room` ORDER BY `id`');
+?>
 <header class="header-section">
   <div class="top-nav">
     <div class="container">
@@ -53,10 +57,15 @@
                 <li>
                   <a href="/rooms.php">Номера</a>
                   <ul class="dropdown">
-                    <li><a href="/room1.php">Стандарт+</a></li>
+                    <?php 
+                    while ($catalog_item = mysqli_fetch_assoc($catalog_list)) {
+                      echo '<li><a href="/room.php?id='.$catalog_item['id'].'">'.$catalog_item['title'].'</a></li>';
+                    }
+                    ?>
+                    <!-- <li><a href="/room1.php">Стандарт+</a></li>
                     <li><a href="/room2.php">Джуниор дабл</a></li>
                     <li><a href="/room3.php">Джуниор твин</a></li>
-                    <li><a href="/room4.php">Люкс</a></li>
+                    <li><a href="/room4.php">Люкс</a></li> -->
                   </ul>
                 </li>
                 <!-- <li><a href="./blog.html">News</a></li> -->
