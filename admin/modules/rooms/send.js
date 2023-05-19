@@ -5,6 +5,8 @@
   const price = document.querySelector('#rooms #price');
   const description = document.querySelector('#rooms #description');
   const property__section = document.querySelector('#rooms #property__section');
+  const photo = document.querySelector('#rooms #photo');
+  // photo.addEventListener('change', get_photo);
 
   const form = document.querySelector('.admin-form');
 
@@ -12,6 +14,8 @@
 
   function send(e) {
     e.preventDefault();
+    let img = '';
+    if(photo.files[0]) img = photo.files[0];
     let props = JSON.stringify(get_property());
     // alert(description.value);
 
@@ -21,6 +25,8 @@
     form_data.append('title', title.value);
     form_data.append('price', price.value);
     form_data.append('description', description.value);
+    form_data.append('photo', img);
+    console.log(img);
 
     fetch(url, {
       method: 'POST',
@@ -29,7 +35,7 @@
     .then(res => {
       alert('Номер добавлен')
       console.log(res.text())
-      window.location.reload();
+      // window.location.reload();
     })
     .catch(error => {
       alert('При загрузке произошла ошибка')

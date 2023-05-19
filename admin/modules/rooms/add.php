@@ -6,11 +6,7 @@ $props = $_POST['props'];
 $price = $_POST['price'];
 $title = $_POST['title'];
 $description = $_POST['description'];
-
-if ($connection) {
-	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `props`, `description`) VALUES (NULL, '$title', '$price', '$props', '$description');");
-}
-exit($props);
+$photo = '';
 
 // если была произведена отправка формы
 if (isset($_FILES['photo'])) {
@@ -27,7 +23,7 @@ if (isset($_FILES['photo'])) {
 }
 
 if ($connection) {
-	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `description`, `photo`) VALUES (NULL, '$name' , '$price', '$description', '$photo');");
+	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `props`, `description`, `photo`) VALUES (NULL, '$title', '$price', '$props', '$description', '$photo');");
 }
 
 function can_upload($file)
@@ -63,6 +59,15 @@ function make_upload($file)
 
 	$GLOBALS['photo'] = $name;
 }
+exit($check);
+
+
+
+if ($connection) {
+	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `description`, `photo`) VALUES (NULL, '$name' , '$price', '$description', '$photo');");
+}
+
+
 
 mysqli_close($connection);
 echo '<script>location.replace("/admin/pages/rooms/");</script>';

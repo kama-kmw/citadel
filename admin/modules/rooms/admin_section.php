@@ -1,6 +1,6 @@
 <div class="admin-page" id="rooms">
    <h2 class="h2 mb20">Добавить номер</h2>
-   <form method="POST" action="/admin/modules/rooms/add.php" class="admin-form mb20">
+   <form method="POST" action="/admin/modules/rooms/add.php" class="admin-form mb20" enctype="multipart/form-data">
 
       <div class="flex mb10">
          <label class="admin-label mr20 w-200">
@@ -9,12 +9,12 @@
          </label>
          <label class="admin-label w-200 mr20">
             <p class="admin-label__text">Цена</p>
-            <input id="price" name="price" class="admin-input" value="">
+            <input id="price" name="price" class="admin-input" value="" >
          </label>
          <label class="admin-label">
             <p class="admin-label__text">Фото на главной</p>
             <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
-            <input type="file" name="photo" class="admin-input-photo">
+            <input type="file" id="photo" name="photo" class="admin-input-photo">
          </label>
       </div>
 
