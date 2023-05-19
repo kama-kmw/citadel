@@ -13,6 +13,7 @@
     '#popup-edit-room #desc_inp'
   );
   const sebd_btn = document.querySelector('#popup-edit-room #update_room');
+  const photo = document.querySelector('#popup-edit-room #photo');
 
   let id;
   let props;
@@ -109,6 +110,8 @@
   }
   function update_room(e) {
     e.preventDefault();
+    let img = '';
+    if(photo.files[0]) img = photo.files[0];
     let props_json = JSON.stringify(props);
     title = document.querySelector('#popup-edit-room #title').value
     price = document.querySelector('#popup-edit-room #price').value
@@ -121,6 +124,7 @@
     form_data.append('title', title);
     form_data.append('price', price);
     form_data.append('description', desc);
+    form_data.append('photo', img);
     
     // alert('props - '+props)
 
@@ -131,7 +135,7 @@
     .then(res => {
       alert('Номер добавлен')
       console.log(res.text())
-      // window.location.reload();
+      window.location.reload();
     })
     .catch(error => {
       alert('При загрузке произошла ошибка')

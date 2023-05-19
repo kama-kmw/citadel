@@ -20,7 +20,7 @@
             <label class="admin-label">
                <p class="admin-label__text">Фото на главной</p>
                <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
-               <input type="file" name="photo" class="admin-input-photo">
+               <input type="file" id="photo" name="photo" class="admin-input-photo">
             </label>
          </div>
 
