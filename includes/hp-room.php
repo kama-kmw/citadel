@@ -8,7 +8,7 @@
           $props = json_decode($catalog_item["props"]);
           echo '
           <div class="col-lg-3 col-md-6">
-            <div class="hp-room-item set-bg" data-setbg="/img/room/room-b1.jpg">
+            <div class="hp-room-item set-bg" data-setbg="/img/room/'.$catalog_item["photo"].'">
               <div class="hr-text">
                 <h3>'.$catalog_item["title"].'</h3>
                 <h2>'.$catalog_item["price"].'<span>/ночь</span></h2>
