@@ -7,6 +7,7 @@ $price = $_POST['price'];
 $title = $_POST['title'];
 $description = $_POST['description'];
 $photo = '';
+$slider = [];
 
 // если была произведена отправка формы
 if (isset($_FILES['photo'])) {
@@ -15,15 +16,19 @@ if (isset($_FILES['photo'])) {
 	if ($check === true) {
 		// загружаем изображение на сервер
 		make_upload($_FILES['photo']);
-		echo "<strong>Файл успешно загружен!</strong><br>";
+		// echo "<strong>Файл успешно загружен!</strong><br>";
 	} else {
 		// выводим сообщение об ошибке
-		echo "<strong>$check</strong>";
+		// echo "<strong>$check</strong>";
 	}
 }
 
+if (isset($_FILES['slider'])) {
+	make_upload_slider($_FILES['slider']);
+}
+
 if ($connection) {
-	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `props`, `description`, `photo`) VALUES (NULL, '$title', '$price', '$props', '$description', '$photo');");
+	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `props`, `description`, `photo`, `slider`) VALUES (NULL, '$title', '$price', '$props', '$description', '$photo', '$slider');");
 }
 
 function can_upload($file)
@@ -59,17 +64,26 @@ function make_upload($file)
 
 	$GLOBALS['photo'] = $name;
 }
-exit($check);
 
+function make_upload_slider($file)
+{
+	// echo $file['name'][0];
+	$name = [];
+	for($key=0; $key<count($file['name']); $key++) {
+		// $name = $name.$file['name'][$key].',';
+		array_push($name, $file['name'][$key]);
+		$uploaddir = '../../../img/slider/';
+		$uploadfile = $uploaddir . basename($file['name'][$key]);
+		// переносим файл в папку
+		move_uploaded_file($file['tmp_name'][$key], $uploadfile);
+	}
 
-
-if ($connection) {
-	mysqli_query($connection, "INSERT INTO `room` (`id`, `title`, `price`, `description`, `photo`) VALUES (NULL, '$name' , '$price', '$description', '$photo');");
+	$GLOBALS['slider'] = json_encode($name);
 }
 
-
-
 mysqli_close($connection);
-echo '<script>location.replace("/admin/pages/rooms/");</script>';
+// echo '<script>location.replace("/admin/pages/rooms/");</script>';
 // header('Location: http://admindjalgan.ru/admin/');
-exit;
+
+exit($slider);
+?>

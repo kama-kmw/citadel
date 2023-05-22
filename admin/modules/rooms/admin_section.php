@@ -9,7 +9,7 @@
          </label>
          <label class="admin-label w-200 mr20">
             <p class="admin-label__text">Цена</p>
-            <input id="price" name="price" class="admin-input" value="" >
+            <input id="price" name="price" class="admin-input" value="">
          </label>
          <label class="admin-label">
             <p class="admin-label__text">Фото на главной</p>
@@ -23,7 +23,7 @@
          <textarea id="description" name="description" class="admin-textarea mb10"></textarea>
       </label>
 
-      <!-- <h4 class="mb10">Слайдер</h4>
+      <h4 class="mb10">Слайдер</h4>
       <div class="flex">
          <input type="file" name="photo" class="d-none" id="input_photo">
          <span class="admin-submit mb10" id="btn_add_photo">Добавить фото</span>
@@ -33,7 +33,7 @@
             <img src="/img/slider/s-35907.jpeg" class="galery__img" name="img">
             <img class="del-icon" src="/img/icons/del-red-icon.png">
          </div>
-      </div> -->
+      </div>
 
       <h4 class="mb10">Характеристики номера</h4>
       <div class="flex mb10">
@@ -54,13 +54,16 @@
             <div class="admin-label t-red">Удалить</div>
          </div> -->
       </div>
-      <input 
-         type="submit" 
-         value="Добавить номер" 
-         class="admin-submit mt20"
-         id="send_data"
-      >
+      <input type="submit" value="Добавить номер" class="admin-submit mt20" id="send_data">
    </form>
+
+   <form method="POST" action="/admin/modules/rooms/add_new_room.php" class="admin-form mb20" enctype="multipart/form-data">
+      <div class="flex">
+         <input type="file" name="photo[]" class="mr20" id="input_photo" multiple>
+         <input type="submit" value="Добавить номер" class="admin-submit">
+      </div>
+   </form>
+
 
    <h2 class="h2 mb20" id="product-list">Список номеров</h2>
    <div class="max-h-600">
@@ -76,7 +79,7 @@
          echo '
          <div class="aside__block relative fa-icon">
             <span class="span-id" style="display: none;" >' . $catalog_item["id"] . '</span>
-            <div class="span-props" style="display: none;">'.$catalog_item["props"].'</div>
+            <div class="span-props" style="display: none;">' . $catalog_item["props"] . '</div>
 
             <div class="span-title w-150 mr20">' . $catalog_item["title"] . '</div>
             <div class="span-price w-80 mr20">' . $catalog_item["price"] . '</div>

@@ -1,3 +1,4 @@
+let slider = [];
 (function () {
 
    const input_photo = document.querySelector('#input_photo');
@@ -6,7 +7,7 @@
 
    input_photo.addEventListener('change', choice);
    btn_add_photo.addEventListener('click', show_choice)
-   let photo_arr = [];
+   
 
    function choice() {
       let file = input_photo.files[0];
@@ -18,12 +19,12 @@
          alert('Выберите фото меньше 3Мб');
          return;
       }
-      photo_arr.push(file);
+      slider.push(file);
       render()
    }
    function render() {
       photo_section.innerHTML = ''
-      photo_arr.map(el => {
+      slider.map(el => {
          const photo_block = create_photo_block(el)
          photo_section.appendChild(photo_block)
       })
