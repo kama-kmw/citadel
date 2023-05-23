@@ -15,6 +15,8 @@ $replace = '</p><p>';
 $desc = str_replace($order, $replace, $desc);
 $props = json_decode($catalog_item["props"]);
 
+$slider = $catalog_item['slider'];
+
 
 
 include_once 'includes/head.php';
@@ -50,11 +52,11 @@ include_once 'includes/head.php';
           <div class="room-details-item">
 
             <!-- <img src="img/room/room-details.jpg" alt=""> -->
-            <div class="hero-slider owl-carousel hero-slider-rooms mb30">
-              <div class="hs-item set-bg" data-setbg="img/room/Стандарт01.JPG"></div>
+            <div class="hero-slider owl-carousel hero-slider-rooms mb30" id="<?php echo $slider; ?>">
+              <!-- <div class="hs-item set-bg" data-setbg="img/room/Стандарт01.JPG"></div>
               <div class="hs-item set-bg" data-setbg="img/room/Стандарт02.JPG"></div>
               <div class="hs-item set-bg" data-setbg="img/room/Стандарт03.JPG"></div>
-              <div class="hs-item set-bg" data-setbg="img/room/Стандарт04.JPG"></div>
+              <div class="hs-item set-bg" data-setbg="img/room/Стандарт04.JPG"></div> -->
             </div>
             <div class="rd-text">
               <div class="rd-title">
@@ -212,6 +214,7 @@ include_once 'includes/head.php';
   <!-- Search model end -->
 
   <!-- Js Plugins -->
+  <script src="js/render_slider.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
@@ -220,6 +223,7 @@ include_once 'includes/head.php';
   <script src="js/jquery.slicknav.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+  
 </body>
 
 </html>
