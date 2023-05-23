@@ -29,10 +29,10 @@
          <span class="admin-submit mb10" id="btn_add_photo">Добавить фото</span>
       </div>
       <div class="galery__section mb20">
-         <div class="galery__block">
+         <!-- <div class="galery__block">
             <img src="/img/slider/s-35907.jpeg" class="galery__img" name="img">
             <img class="del-icon" src="/img/icons/del-red-icon.png">
-         </div>
+         </div> -->
       </div>
 
       <h4 class="mb10">Характеристики номера</h4>
@@ -57,14 +57,6 @@
       <input type="submit" value="Добавить номер" class="admin-submit mt20" id="send_data">
    </form>
 
-   <form method="POST" action="/admin/modules/rooms/add_new_room.php" class="admin-form mb20" enctype="multipart/form-data">
-      <div class="flex">
-         <input type="file" name="photo[]" class="mr20" id="input_photo" multiple>
-         <input type="submit" value="Добавить номер" class="admin-submit">
-      </div>
-   </form>
-
-
    <h2 class="h2 mb20" id="product-list">Список номеров</h2>
    <div class="max-h-600">
       <div class="aside__block relative">
@@ -80,6 +72,7 @@
          <div class="aside__block relative fa-icon">
             <span class="span-id" style="display: none;" >' . $catalog_item["id"] . '</span>
             <div class="span-props" style="display: none;">' . $catalog_item["props"] . '</div>
+            <div class="span-slider" style="display: none;">' . $catalog_item["slider"] . '</div>
 
             <div class="span-title w-150 mr20">' . $catalog_item["title"] . '</div>
             <div class="span-price w-80 mr20">' . $catalog_item["price"] . '</div>

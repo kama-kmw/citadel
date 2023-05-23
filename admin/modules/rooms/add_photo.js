@@ -36,6 +36,7 @@ let slider = [];
       const imageEl = document.createElement('img')
       imageEl.src = URL.createObjectURL(photo)
       imageEl.classList.add('galery__img');
+      imageEl.id = photo.name;
 
       const del_icon = document.createElement('img')
       del_icon.src = '/img/icons/del-red-icon.png'

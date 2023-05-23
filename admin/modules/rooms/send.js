@@ -27,6 +27,8 @@
         form_data.append('slider[]', item);
       }
     }
+    console.log(img)
+    console.log(slider)
 
     fetch(url, {
       method: 'POST',
@@ -34,7 +36,7 @@
     })
       .then((res) => {
         alert('Номер добавлен');
-        console.log(res.json());
+        // console.log(res.text());
         window.location.reload();
       })
       .catch((error) => {

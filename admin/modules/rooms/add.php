@@ -68,17 +68,17 @@ function make_upload($file)
 function make_upload_slider($file)
 {
 	// echo $file['name'][0];
-	$name = [];
+	$names = [];
 	for($key=0; $key<count($file['name']); $key++) {
-		// $name = $name.$file['name'][$key].',';
-		array_push($name, $file['name'][$key]);
+		$name = 'r-' . mt_rand(0, 10000) . $file['name'][$key];
+		array_push($names, $name);
 		$uploaddir = '../../../img/slider/';
-		$uploadfile = $uploaddir . basename($file['name'][$key]);
+		$uploadfile = $uploaddir . basename($name);
 		// переносим файл в папку
 		move_uploaded_file($file['tmp_name'][$key], $uploadfile);
 	}
 
-	$GLOBALS['slider'] = json_encode($name);
+	$GLOBALS['slider'] = join('|', $names);
 }
 
 mysqli_close($connection);
