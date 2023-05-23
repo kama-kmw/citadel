@@ -5,8 +5,10 @@ $id = $_POST['id'];
 $props = $_POST['props'];
 $price = $_POST['price'];
 $title = $_POST['title'];
+$slider = $_POST['slider'];
 $description = $_POST['description'];
 $photo = '';
+$add_slider = '';
 
 // если была произведена отправка формы
 if (isset($_FILES['photo'])) {
@@ -21,14 +23,33 @@ if (isset($_FILES['photo'])) {
 		echo "<strong>$check</strong>";
 	}
 }
+// если была произведена отправка формы
+if (isset($_FILES['add_slider'])) {
+	// проверяем, можно ли загружать изображение
+	$check = can_upload($_FILES['add_slider']);
+	if ($check === true) {
+		// загружаем изображение на сервер
+		make_upload_slider($_FILES['add_slider']);
+		echo "<strong>Файл успешно загружен!</strong><br>";
+	} else {
+		// выводим сообщение об ошибке
+		echo "<strong>$check</strong>";
+	}
+}
+if($add_slider && $slider) $slider = $slider.'|'.$add_slider;
+else if ($add_slider) $slider = $add_slider;
+else $slider = '';
 
 
 if ($connection) {
-	mysqli_query($connection, "UPDATE `room` SET `title` = '$title', `price` = '$price', `props` = '$props', `description` = '$description'  WHERE `room`.`id` = '$id';");
+	mysqli_query($connection, "UPDATE `room` SET `title` = '$title', `price` = '$price', `props` = '$props', `description` = '$description', `slider` = '$slider'  WHERE `room`.`id` = '$id';");
 }
 if ($photo) {
 	mysqli_query($connection, "UPDATE `room` SET `photo` = '$photo'  WHERE `room`.`id` = '$id';");
 }
+// if ($slider) {
+// 	mysqli_query($connection, "UPDATE `room` SET `slider` = '$slider'  WHERE `room`.`id` = '$id';");
+// }
 
 function can_upload($file)
 {
@@ -62,6 +83,18 @@ function make_upload($file)
 	move_uploaded_file($file['tmp_name'], $uploadfile);
 
 	$GLOBALS['photo'] = $name;
+}
+function make_upload_slider($file)
+{
+	// формируем уникальное имя картинки: name и случайное число
+	$name = 'r-' . mt_rand(0, 10000) . $file['name'];
+	// формируем путь к папке загрузки
+	$uploaddir = '../../../img/slider/';
+	$uploadfile = $uploaddir . basename($name);
+	// переносим файл в папку
+	move_uploaded_file($file['tmp_name'], $uploadfile);
+
+	$GLOBALS['add_slider'] = $name;
 }
 mysqli_close($connection);
 // echo '<script>location.replace("/admin/pages/main/#portfolio");</script>';

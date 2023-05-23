@@ -8,6 +8,7 @@
       <form method="POST" action="/admin/modules/rooms/update_room.php" class="admin-form" enctype="multipart/form-data">
 
          <input id="id" name="id" style="display: none;">
+
          <div class="flex mb10">
             <label class="admin-label mr20 w-200">
                <p class="admin-label__text">Заголовок</p>
@@ -53,12 +54,26 @@
                <span class="admin-submit" id="prop_btn">Добавить</span>
             </label>
          </div>
-         <div class="property__section" id="property__section">
+         <div class="property__section mb20" id="property__section">
             <!-- <div class="flex property__item">
             <div class="admin-label mr20 w-200" id="prop">sdfd</div>
             <div class="admin-label mr20 w-200" id="desc">sdfsd</div>
             <div class="admin-label t-red">Удалить</div>
          </div> -->
+         </div>
+         <h4 class="mb10">Слайдер</h4>
+         <div class="flex">
+            <label class="admin-label">
+               <p class="admin-label__text">Добавить слайдер</p>
+               <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+               <input type="file" id="add_slider" name="add_slider" class="admin-input-photo">
+            </label>
+         </div>
+         <div class="galery__section mb20">
+            <!-- <div class="galery__block">
+               <img src="/img/slider/s-35907.jpeg" class="galery__img" name="img">
+               <img class="del-icon" src="/img/icons/del-red-icon.png">
+            </div> -->
          </div>
          <input type="submit" value="редактировать" class="admin-submit mt20" id="update_room">
       </form>
