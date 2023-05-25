@@ -60,7 +60,7 @@ include_once 'includes/head.php';
             </div>
             <div class="rd-text">
               <div class="rd-title">
-                <h3>Стандарт+</h3>
+                <h3><?php echo $page_title; ?></h3>
                 <div class="rdt-right">
                   <!-- <div class="rating">
                                         <i class="icon_star"></i>

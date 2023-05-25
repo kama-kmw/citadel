@@ -40,7 +40,7 @@ if (isset($data['do_login'])) {
 	<!-- <link rel="stylesheet" href="/admin/css/popup.css"> -->
 	<!-- <link rel="stylesheet" href="/admin/css/tag.css"> -->
 
-	<title>Административная панель ARD-Klinik</title>
+	<title>Админ панель Hotel Citadel</title>
 
 	<!-- <script src="/js/jquery-3.3.1.min.js"></script> -->
 </head>

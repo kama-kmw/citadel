@@ -32,7 +32,7 @@ if (!$connection) {
 	<link rel="stylesheet" href="/admin/css/tag.css">
 
 
-	<title>Административная панель Hotel-Citadel</title>
+	<title>Админ панель Hotel-Citadel</title>
 
 	<!-- <script src="/js/jquery-3.3.1.min.js"></script> -->
 </head>
