@@ -96,7 +96,16 @@
     if (!is_delete) return;
     const el = e.target;
     const parent = el.closest('.property__item');
+    const prop = parent.querySelector('#prop').textContent
+    const desc = parent.querySelector('#desc').textContent
+    // console.log('prop - ' + prop)
+    // console.log('desc - ' + desc)
     parent.remove();
+    for(let i=0; i<props.length; i++) {
+      if(props[i].prop == prop && props[i].desc == desc) {
+        props.splice(i, 1)
+      }
+    }
   }
   function add_prop() {
     let prop = prop_inp.value;
