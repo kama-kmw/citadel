@@ -1,5 +1,5 @@
 (function () {
-  
+  // console.clear()
   const edit_btn = document.querySelectorAll('#rooms .edit-icon');
   const prop_section = document.querySelector(
     '#popup-edit-room #property__section'
@@ -22,7 +22,7 @@
   let title;
   let price;
   let desc;
-  let slider;
+  let slider_data = '';
   let arr_slider = [];
 
   for (let i = 0; i < edit_btn.length; i++) {
@@ -45,14 +45,14 @@
     desc = parent.querySelector('.span-desc').textContent;
     let props_json = parent.querySelector('.span-props').textContent;
     if (props_json !== 'undefined') props = JSON.parse(props_json);
-    slider = parent.querySelector('.span-slider').textContent;
+    slider_data = parent.querySelector('.span-slider').textContent;
 
     popup.querySelector('#id').value = id;
     popup.querySelector('#title').value = title;
     popup.querySelector('#price').value = price;
     popup.querySelector('#description').value = desc;
     popup.querySelector('#description').value = desc;
-    if(slider.length != 0) get_arr_slider(slider);
+    if(slider_data.length != 0) get_arr_slider(slider_data);
     if (props) render_props(props);
 
     popup.style.display = 'flex';
@@ -146,7 +146,7 @@
     form_data.append('price', price);
     form_data.append('description', desc);
     form_data.append('photo', img);
-    if(arr_slider.length != 0) form_data.append('slider', arr_slider.join('|'));
+    form_data.append('old_slider', arr_slider.join('|'));
     form_data.append('add_slider', img_slider);
 
     // alert('props - '+props) .join(" ")
@@ -167,6 +167,7 @@
   }
   function get_arr_slider(slider) {
     arr_slider = [];
+    
     let ind_start = 0;
     for (let i = 0; i < slider.length; i++) {
       if (slider[i] == '|') {
@@ -179,22 +180,10 @@
     render_slider(arr_slider);
   }
   function render_slider(arr) {
+    slider_section.innerHTML = '';
     for (let item of arr) {
-      const imageEl = document.createElement('img');
-      imageEl.src = '/img/slider/'+item;
-      imageEl.classList.add('galery__img');
-
-      const del_icon = document.createElement('img');
-      del_icon.src = '/img/icons/del-red-icon.png';
-      del_icon.classList.add('del-icon');
-
-      const photo_block = document.createElement('div');
-      photo_block.classList.add('galery__block');
-      photo_block.classList.add('mb10');
-      photo_block.append(imageEl);
-      photo_block.append(del_icon);
-
-      slider_section.append(photo_block);
+      let photo_block = '<div class="galery__block"><img src="/img/slider/'+item+'" class="galery__img"><img class="del-icon" src="/img/icons/del-red-icon.png"></div>'
+      slider_section.innerHTML += photo_block;
     }
   }
   function del_slider(e) {
@@ -211,4 +200,7 @@
     }
     parent.remove();
   }
+  // function add_slider() {
+
+  // }
 })();

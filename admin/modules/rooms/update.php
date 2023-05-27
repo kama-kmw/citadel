@@ -5,7 +5,7 @@ $id = $_POST['id'];
 $props = $_POST['props'];
 $price = $_POST['price'];
 $title = $_POST['title'];
-$slider = $_POST['slider'];
+$slider = $_POST['old_slider'];
 $description = $_POST['description'];
 $photo = '';
 $add_slider = '';
@@ -38,7 +38,7 @@ if (isset($_FILES['add_slider'])) {
 }
 if($add_slider && $slider) $slider = $slider.'|'.$add_slider;
 else if ($add_slider) $slider = $add_slider;
-else $slider = '';
+// else $slider = '';
 
 
 if ($connection) {

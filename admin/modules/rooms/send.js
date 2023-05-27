@@ -22,13 +22,10 @@
     form_data.append('description', description.value);
     form_data.append('photo', img);
     if (slider.length) {
-      console.log('слайдер есть')
       for (item of slider) {
         form_data.append('slider[]', item);
       }
     }
-    console.log(img)
-    console.log(slider)
 
     fetch(url, {
       method: 'POST',
