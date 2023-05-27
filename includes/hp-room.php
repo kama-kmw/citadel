@@ -7,7 +7,7 @@
         while ($catalog_item = mysqli_fetch_assoc($catalog_list)) {
           $props = json_decode($catalog_item["props"]);
           echo '
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 mb-3">
             <div class="hp-room-item set-bg" data-setbg="/img/room/'.$catalog_item["photo"].'">
               <div class="hr-text">
                 <h3>'.$catalog_item["title"].'</h3>

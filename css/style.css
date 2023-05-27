@@ -783,6 +783,10 @@ ol {
   position: relative;
   overflow: hidden;
 }
+.hr-text {
+  padding: 10px;
+  background: rgba(0,0,0,0.4);
+}
 .hp-room-items .hp-room-item:hover .hr-text {
   bottom: 135px;
 }
