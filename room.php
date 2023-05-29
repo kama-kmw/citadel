@@ -69,7 +69,8 @@ include_once 'includes/head.php';
                                         <i class="icon_star"></i>
                                         <i class="icon_star-half_alt"></i>
                                     </div> -->
-                  <a href="#">Позвонить</a>
+<!--                  <a href="#">Позвонить</a>-->
+                  <a href="#" data-tl-booking-open="true">Бронировать</a>
                 </div>
               </div>
               <h2><?php echo $price; ?><span>/ночь</span></h2>
@@ -159,6 +160,7 @@ include_once 'includes/head.php';
                     </div> -->
         </div>
         <div class="col-lg-4">
+          <!--
           <div class="room-booking">
             <h3>Заполните</h3>
             <form action="#">
@@ -172,7 +174,7 @@ include_once 'includes/head.php';
                 <input type="text" class="date-input" id="date-out">
                 <i class="icon_calendar"></i>
               </div>
-              <div class="select-option">
+              <div class="select-option"> -->
                 <!-- <label for="guest">Гости:</label> -->
                 <!-- <select id="guest">
                                     <option value="">3 Adults</option>
@@ -181,6 +183,7 @@ include_once 'includes/head.php';
                 <!-- <select id="guest">
                                     <option value="">3 Adults</option>
                                 </select> -->
+              <!--
               </div>
               <div class="select-option">
                 <label for="room">Номера:</label>
@@ -190,6 +193,11 @@ include_once 'includes/head.php';
               </div>
               <button type="submit">Забронировать</button>
             </form>
+          </div> -->
+          <div id="block-search-room">
+            <div id="tl-search-form" class="tl-container">
+              <noindex><a href="https://www.travelline.ru/products/tl-hotel/" rel="nofollow" target="_blank">TravelLine</a></noindex>
+            </div>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@ $banner_desc = str_replace($order, $replace, $banner['description']);
         </div>
       </div>
       <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+        <!--
         <div class="booking-form">
           <h3>Бронирование номеров</h3>
           <form action="#">
@@ -28,7 +29,7 @@ $banner_desc = str_replace($order, $replace, $banner['description']);
               <label for="date-out">Выезд:</label>
               <input type="text" class="date-input" id="date-out" />
               <i class="icon_calendar"></i>
-            </div>
+            </div> -->
             <!-- <div class="select-option">
                   <label for="guest">Guests:</label>
                   <select id="guest">
@@ -36,6 +37,7 @@ $banner_desc = str_replace($order, $replace, $banner['description']);
                     <option value="">3 Adults</option>
                   </select>
                 </div> -->
+        <!--
             <div class="select-option">
               <label for="room">Номера:</label>
               <select id="room">
@@ -48,6 +50,11 @@ $banner_desc = str_replace($order, $replace, $banner['description']);
             </div>
             <button type="submit">Найти номер</button>
           </form>
+        </div> -->
+        <div id="block-search-main">
+          <div id="tl-search-form" class="tl-container">
+            <noindex><a href="https://www.travelline.ru/products/tl-hotel/" rel="nofollow" target="_blank">TravelLine</a></noindex>
+          </div>
         </div>
       </div>
     </div>
