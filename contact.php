@@ -14,6 +14,13 @@ include_once 'includes/head.php';
     <!-- Header -->
     <?php include 'includes/header.php'; ?>
 
+    <!-- TL Search Form Section Begin -->
+    <div id="block-search">
+        <div id="tl-search-form" class="tl-container">
+            <noindex><a href="https://www.travelline.ru/products/tl-hotel/" rel="nofollow" target="_blank">TravelLine</a></noindex>
+        </div>
+    </div>
+
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
         <div class="container">
@@ -30,37 +37,16 @@ include_once 'includes/head.php';
                                 </tr>
                                 <tr>
                                     <td class="c-o">Телефон:</td>
-                                    <td>8 (965) 928-77-77</td>
+                                    <td><a href="tel:<?php echo $r1_social['phoneValide'] ?>"><?php echo $r1_social['phone']; ?></a></td>
                                 </tr>
                                 <tr>
                                     <td class="c-o">Телефон:</td>
-                                    <td>8 (928) 543-33-44</td>
+                                    <td><a href="tel:<?php echo $r1_social['phone2Valide'] ?>"><?php echo $r1_social['phone2']; ?></a></td>
                                 </tr>
-                                <!-- <tr>
-                                    <td class="c-o">Fax:</td>
-                                    <td>+(12) 345 67890</td>
-                                </tr> -->
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <!-- <div class="col-lg-7 offset-lg-1">
-                    <form action="#" class="contact-form">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Your Name">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Your Email">
-                            </div>
-                            <div class="col-lg-12">
-                                <textarea placeholder="Your Message"></textarea>
-                                <button type="submit">Submit Now</button>
-                            </div>
-                        </div>
-                    </form>
-                </div> -->
-
             </div>
             <div class="map">
                 <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/11007/derbent/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Дербент</a><a href="https://yandex.ru/maps/11007/derbent/house/ulitsa_mira_1/YEEYdA9kS0UDQFpofXx0dXxlYw==/?ll=48.284204%2C42.054068&utm_medium=mapframe&utm_source=maps&z=16.75" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Мира, 1 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=48.284204%2C42.054068&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0MDU2MTg0MDg4ElvQoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCU0LDQs9C10YHRgtCw0L0sINCU0LXRgNCx0LXQvdGCLCDRg9C70LjRhtCwINCc0LjRgNCwLCAxIgoNByNBQhVdNyhC&z=16.75" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
