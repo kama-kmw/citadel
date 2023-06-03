@@ -1,5 +1,6 @@
 <?php
 include 'admin/connect.php';
+include 'admin/modules/social/get.php';
 $catalog_list = mysqli_query($connection, 'SELECT * FROM `room` ORDER BY `id`');
 ?>
 <header class="header-section">
@@ -8,18 +9,15 @@ $catalog_list = mysqli_query($connection, 'SELECT * FROM `room` ORDER BY `id`');
       <div class="row">
         <div class="col-lg-6">
           <ul class="tn-left">
-            <li><a href="tel:89659287777"><i class="fa fa-phone"></i> +7 (965) 928-77-77</a></li>
-            <li><a href="tel:89285433344"><i class="fa fa-phone"></i> +7 (928) 543-33-44</a></li>
+            <li><a href="tel:<?php echo $r1_social['phoneValide'] ?>"><i class="fa fa-phone"></i><?php echo $r1_social['phone']; ?></a></li>
+            <li><a href="tel:<?php echo $r1_social['phone2Valide'] ?>"><i class="fa fa-phone"></i><?php echo $r1_social['phone2']; ?></a></li>
           </ul>
         </div>
         <div class="col-lg-6">
           <div class="tn-right">
             <div class="top-social">
-              <!-- <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a> -->
-              <a href="#"></a><i class="fa fa-whatsapp"></i>
-              <!-- <a href="#"><i class="fa fa-envelope"></i></a> -->
-              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="<?php echo $r1_social['waValide']; ?>" target="_blank"><i class="fa fa-whatsapp"></i></a>
+              <a href="<?php echo $r1_social['insta']; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
             <!-- <a href="#" class="bk-btn">Booking Now</a> -->
             <!-- <div class="language-option">

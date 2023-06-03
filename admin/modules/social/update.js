@@ -35,7 +35,7 @@
             if(phone[i] === sym) phoneValide += sym;
          }
       }
-      const link = 'https://wa.me/' +phoneValide+ '?text=';
+      const link = 'https://wa.me/' +phoneValide;
       return link;
    }
    function send() {
