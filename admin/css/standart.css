@@ -105,5 +105,7 @@ a {
 }
 .t-red {
     color: red;
-    cursor: pointer;
+}
+.t-green {
+    color: green;
 }

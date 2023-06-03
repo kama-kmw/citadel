@@ -18,13 +18,14 @@ if (!$connection) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name=”robots” content=”noindex, nofollow”>
 
 	<link rel="stylesheet" href="/admin/css/standart.css">
 	<link rel="stylesheet" href="/admin/css/admin.css">
 	<link rel="stylesheet" href="/admin/css/popup.css">
 	<link rel="stylesheet" href="/admin/css/tag.css">
 
-	<title>Административная панель Art-Home</title>
+	<title>Админ панель Hotel-citadel</title>
 
 	<!-- <script src="/js/jquery-3.3.1.min.js"></script> -->
 </head>
@@ -39,13 +40,13 @@ if (!$connection) {
 	<section class="admin-content">
 		<h1 class="h1 m0">Настройки</h1>
 		<?php
-		include '../../modules/social/admin_section.php';
+		// include '../../modules/social/admin_section.php';
 		include '../../modules/setting/admin_section.php';
 		?>
 	</section>
 </main>
 
-<script src="/js/close_popup.js"></script>
+<!-- <script src="/js/close_popup.js"></script> -->
 
 </body>
 </html>

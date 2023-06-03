@@ -2,7 +2,7 @@
 (function () {
    const del_btn = document.querySelectorAll(".slider__section .del-icon");
    for (let i=0; i<del_btn.length; i++) {
-      console.log(del_btn[i])
+      // console.log(del_btn[i])
       del_btn[i].addEventListener("click", del_slide);
    };
  
