@@ -40,7 +40,7 @@ if (!$connection) {
 	<section class="admin-content">
 		<h1 class="h1 m0">Настройки</h1>
 		<?php
-		// include '../../modules/social/admin_section.php';
+		include '../../modules/social/admin_section.php';
 		include '../../modules/setting/admin_section.php';
 		?>
 	</section>

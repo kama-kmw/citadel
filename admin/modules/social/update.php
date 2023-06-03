@@ -1,15 +1,20 @@
 <?php 
 include "../../connect.php";
 
-$tel = $_POST['tel'];
+$phone = $_POST['phone'];
+$phone2 = $_POST['phone2'];
 $wa = $_POST['wa'];
-$mail = $_POST['mail'];
+$insta = $_POST['insta'];
+$phoneValide = $_POST['phoneValide'];
+$phone2Valide = $_POST['phone2Valide'];
+$waValide = $_POST['waValide'];
 
 if($connection) {
-   mysqli_query($connection, "UPDATE `social` SET `tel` = '$tel', `wa` = '$wa', `mail` = '$mail' WHERE `social`.`id` = 1;");
+   mysqli_query($connection, "UPDATE `social` SET `phone` = '$phone', `phone2` = '$phone2', `wa` = '$wa', `insta` = '$insta', `phoneValide` = '$phoneValide', `phone2Valide` = '$phone2Valide', `waValide` = '$waValide' WHERE `social`.`id` = 1;");
 }
 
 mysqli_close($connection);
-echo '<script>location.replace("/admin/pages/setting/");</script>';
+// echo '<script>location.replace("/admin/pages/setting/");</script>';
 // header('Location: http://admindjalgan.ru/admin/');
-exit;
+exit('test');
+?>
