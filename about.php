@@ -12,6 +12,13 @@ include_once 'includes/head.php';
     <!-- Header -->
     <?php include 'includes/header.php'; ?>
 
+    <!-- TL Search Form Section Begin -->
+    <div id="block-search">
+      <div id="tl-search-form" class="tl-container">
+        <noindex><a href="https://www.travelline.ru/products/tl-hotel/" rel="nofollow" target="_blank">TravelLine</a></noindex>
+      </div>
+    </div>
+
     <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
         <div class="container">

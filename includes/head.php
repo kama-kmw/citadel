@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <meta name="robots" content="noindex" /> -->
-  <title><?php echo $head_title; ?></title>
+  <title><?php echo $head_title; ?>, 	г. Дербент - официальный сайт</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
   <link rel="stylesheet" href="/css/style.css?v=3" type="text/css">
   <link rel="stylesheet" href="/css/popup.css" type="text/css">
+  <link rel="stylesheet" href="/css/travelline-style.css" type="text/css">
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -63,4 +64,5 @@
 
     gtag('config', 'G-FF5N0YZ96W');
   </script>
+  <script src="/js/tl-head.js"></script>
 </head>
