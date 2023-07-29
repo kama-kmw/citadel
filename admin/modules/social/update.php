@@ -8,9 +8,10 @@ $insta = $_POST['insta'];
 $phoneValide = $_POST['phoneValide'];
 $phone2Valide = $_POST['phone2Valide'];
 $waValide = $_POST['waValide'];
+$mail = $_POST['mail'];
 
 if($connection) {
-   mysqli_query($connection, "UPDATE `social` SET `phone` = '$phone', `phone2` = '$phone2', `wa` = '$wa', `insta` = '$insta', `phoneValide` = '$phoneValide', `phone2Valide` = '$phone2Valide', `waValide` = '$waValide' WHERE `social`.`id` = 1;");
+   mysqli_query($connection, "UPDATE `social` SET `phone` = '$phone', `phone2` = '$phone2', `wa` = '$wa', `insta` = '$insta', `phoneValide` = '$phoneValide', `phone2Valide` = '$phone2Valide', `waValide` = '$waValide', `mail` = '$mail' WHERE `social`.`id` = 1;");
 }
 
 mysqli_close($connection);

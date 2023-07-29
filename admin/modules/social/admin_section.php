@@ -25,6 +25,13 @@ include '../../modules/social/get.php';
             <input id="insta_inp" class="admin-input" placeholder="Ссылка" value="<?php echo $r1_social['insta'] ?>">
         </label>
     </div>
+
+    <div class="flex mb10">
+        <label class="admin-label mr20 w-300">
+        <h4 class="mb10">E-mail</h4>
+            <input id="mail_inp" class="admin-input" placeholder="E-mail"  value="<?php echo $r1_social['mail'] ?>">
+        </label>
+    </div>
     
     <div class="flex mb10">
         <label class="admin-label w-200">

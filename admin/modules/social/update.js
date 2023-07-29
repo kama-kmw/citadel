@@ -3,6 +3,7 @@
    const phone2_inp = document.querySelector('#social #phone2_inp');
    const wa_inp = document.querySelector('#social #wa_inp');
    const insta_inp = document.querySelector('#social #insta_inp');
+   const mail_inp = document.querySelector('#social #mail_inp');
    const send_btn = document.querySelector('#social #send_btn');
 
    let phoneValide = '';
@@ -48,6 +49,7 @@
       form_data.append('phoneValide', phoneValide);
       form_data.append('phone2Valide', phone2Valide);
       form_data.append('waValide', waValide);
+      form_data.append('mail', mail_inp.value);
 
       fetch(url, {
          method: 'POST',

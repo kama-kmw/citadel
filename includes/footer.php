@@ -17,6 +17,7 @@ include 'admin/modules/social/get.php';
             <div class="fa-social">
               <a href="<?php echo $r1_social['waValide']; ?>" target="_blank"><i class="fa fa-whatsapp"></i></a>
               <a href="<?php echo $r1_social['insta']; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="mailto:<?php echo $r1_social['mail']; ?>" target="_blank"><i class="fa fa-envelope-o"></i></a>
             </div>
           </div>
         </div>
